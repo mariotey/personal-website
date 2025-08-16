@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import profilePic from "../../images/profile.jpg";
 import Divider from "../ui/Divider";
 import heroData from "../../data/hero.json";
@@ -26,7 +27,7 @@ export default function Hero() {
 
         <div className="mt-6 space-x-4">
             <a
-            href="/resume.pdf"
+            href="/chat"
             className="px-6 py-2 bg-blue-600 text-white rounded-lg shadow hover:bg-blue-700 transition-colors"
             >
             Try my GPT!
