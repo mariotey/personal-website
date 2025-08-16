@@ -1,0 +1,112 @@
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
+import Image from "next/image";
+import profilePic from "../images/profile.jpg";
+
+export default function Home() {
+  return (
+    <div>
+      {/* Navbar */}
+      <Navbar />
+
+      {/* Hero Section */}
+      <main className="flex flex-col items-center justify-center min-h-screen text-center p-10">
+        <Image
+          src={profilePic}
+          alt="Mario Tey"
+          width={150}
+          height={150}
+          className="rounded-full shadow-lg"
+        />
+        <h1 className="text-4xl font-bold mt-6">Ming Chuan Tey</h1>
+        <h2 className="text-xl text-gray-600 mt-2">
+          Data Scientist · Machine Learning Engineer
+        </h2>
+        <p className="mt-4 max-w-2xl text-gray-700">
+          I build data-driven solutions in forecasting, MLOps, and computer vision. Passionate about transforming
+          complex problems into scalable ML tools.
+        </p>
+
+        <div className="mt-6 space-x-4">
+          <a
+            href="/resume.pdf"
+            className="px-6 py-2 bg-blue-600 text-white rounded-lg shadow hover:bg-blue-700"
+          >
+            Try my GPT!
+          </a>
+          <a
+            href="/contact"
+            className="px-6 py-2 bg-blue-600 text-white rounded-lg shadow hover:bg-blue-700"
+          >
+            Contact Me
+          </a>
+        </div>
+      </main>
+
+      {/* Skills Section */}
+      <section className="mt-20 mb-20 max-w-4xl mx-auto text-center">
+        <h3 className="text-2xl font-semibold mb-6">Skills & Tech Stack</h3>
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
+          {[
+            "Python",
+            "PyTorch",
+            "TensorFlow",
+            "AWS",
+            "Docker",
+            "SQL",
+            "Computer Vision",
+            "Forecasting",
+          ].map((skill) => (
+            <div
+              key={skill}
+              className="p-4 border rounded-lg shadow-sm bg-grey hover:shadow-md"
+            >
+              {skill}
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Projects Section */}
+      <section className="mt-20 mb-20 max-w-5xl mx-auto text-center">
+        <h3 className="text-2xl font-semibold mb-8">Projects</h3>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+          {[
+            {
+              name: "Population Forecast Model",
+              description:
+                "Cohort-component model with housing constraints and migration optimization.",
+              link: "https://github.com/your-repo",
+            },
+            {
+              name: "Movie Recommendation System",
+              description: "Image-based recommender system with user interaction.",
+              link: "https://github.com/your-repo",
+            },
+            // Add more projects here
+          ].map((project) => (
+            <div
+              key={project.name}
+              className="p-6 border rounded-lg shadow-sm bg-white hover:shadow-md text-left"
+            >
+              <h4 className="text-xl font-semibold mb-2">{project.name}</h4>
+              <p className="text-gray-700 mb-4">{project.description}</p>
+              <a
+                href={project.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-600 hover:underline"
+              >
+                View on GitHub →
+              </a>
+            </div>
+          ))}
+        </div>
+      </section>
+
+
+      {/* Footer */}
+      <Footer />
+    </div>
+  );
+}
