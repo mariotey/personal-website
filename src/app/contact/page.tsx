@@ -1,5 +1,5 @@
-import Footer from "../../components/Footer";
-import Divider from "../../components/Divider";
+import Footer from "../../components/ui/Footer";
+import Divider from "../../components/ui/Divider";
 
 export default function Contact() {
   return (

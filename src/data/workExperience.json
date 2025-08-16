@@ -1,0 +1,14 @@
+[
+  {
+    "role": "Data Scientist",
+    "company": "National University Health System (NUHS)",
+    "year": "2021 – Present",
+    "description": "Developed cohort-component population forecast model with housing and migration constraints, supporting long-term healthcare capacity planning."
+  },
+  {
+    "role": "Business Analyst",
+    "company": "Healthcare Sector",
+    "year": "2018 – 2021",
+    "description": "Led analytics projects to optimize patient flow and operational efficiency, leveraging SQL, Python, and statistical modeling."
+  }
+]

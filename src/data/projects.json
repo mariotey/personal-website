@@ -1,0 +1,12 @@
+[
+    {
+        "name": "Population Forecast Model",
+        "description": "Cohort-component model with housing constraints and migration optimization.",
+        "link": "https://github.com/your-repo"
+    },
+    {
+        "name": "Movie Recommendation System",
+        "description": "Image-based recommender system with user interaction.",
+        "link": "https://github.com/mariotey/Recommender"
+    }
+]
