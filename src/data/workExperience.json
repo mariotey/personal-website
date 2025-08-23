@@ -2,13 +2,31 @@
   {
     "role": "Data Scientist",
     "company": "National University Health System (NUHS)",
-    "year": "2021 – Present",
-    "description": "Developed cohort-component population forecast model with housing and migration constraints, supporting long-term healthcare capacity planning."
+    "year": "Dec 2024 – Present",
+    "description": [
+      "Built and managed forecasting pipelines aligned with the full machine learning lifecycle, emphasizing reproducibility and documentation, while collaborating closely with stakeholders to ensure reliable and actionable insights for healthcare planning.",
+      "Developed scalable, housing-constrained cohort-component and logarithmic models to forecast Singapore’s resident and non-resident populations, using SingStat datasets and exogenous features forecasted with statsforecast to support long-term healthcare demand and resource planning within NUHS cluster.",
+      "Managed and optimized a GAM-based bed occupancy forecasting pipeline, improving computational efficiency, forecast granularity, and internal documentation to support hospital resource planning, budgeting, and patient care decisions."
+    ]
   },
   {
-    "role": "Business Analyst",
-    "company": "Healthcare Sector",
-    "year": "2018 – 2021",
-    "description": "Led analytics projects to optimize patient flow and operational efficiency, leveraging SQL, Python, and statistical modeling."
+    "role": "Data Science Intern",
+    "company": "Johnson & Johnson Pte Ltd",
+    "year": "May 2024 – Aug 2024",
+    "description": [
+      "Developed and deployed a rule-based classification pipeline that uses features identified with tsfeatures to classify time series forecasts by materiality, volatility, and accuracy into intuitive labels (e.g., “Discontinued”, “Highly Volatile”), improving stakeholder interpretability and decision-making.",
+      "Incorporated machine learning models using mlforecast, improving forecasting accuracy by ~70% for targeted time series previously forecasted with statistical and econometric models.",
+      "Utilized Git for version control, ensuring reproducibility and smooth team collaboration."
+    ]
+  },
+  {
+    "role": "Data Engineering Intern",
+    "company": "MDesign Solutions Pte Ltd",
+    "year": "Aug 2023 – Jan 2024",
+    "description": [
+      "Developed and deployed a rule-based classification pipeline that uses features identified with tsfeatures to classify time series forecasts by materiality, volatility, and accuracy into intuitive labels (e.g., “Discontinued”, “Highly Volatile”), improving stakeholder interpretability and decision-making.",
+      "Incorporated machine learning models using mlforecast, improving forecasting accuracy by ~70% for targeted time series previously forecasted with statistical and econometric models.",
+      "Utilized Git for version control, ensuring reproducibility and smooth team collaboration."
+    ]
   }
 ]

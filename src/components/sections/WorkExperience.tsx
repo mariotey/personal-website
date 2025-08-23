@@ -22,18 +22,20 @@ export default function WorkExperience() {
                     <h4 className="text-xl font-semibold text-gray-900">
                         {exp.role}
                     </h4>
-                    <span className="text-gray-700 font-medium">{exp.year}</span>
+                        <span className="text-gray-700 font-medium">{exp.year}</span>
                     </div>
 
                     {/* Company */}
                     <h5 className="text-gray-700 font-semibold mt-2 text-justify">
-                    {exp.company}
+                        {exp.company}
                     </h5>
 
                     {/* Description */}
-                    <p className="text-gray-700 text-sm mt-3 text-justify">
-                    {exp.description}
-                    </p>
+                    <ul className="list-disc list-outside ml-6 text-gray-700 text-sm mt-3 space-y-2 text-justify">
+                        {exp.description.map((point: string, idx: number) => (
+                            <li key={idx}>{point}</li>
+                        ))}
+                    </ul>
                 </div>
                 ))}
             </div>
