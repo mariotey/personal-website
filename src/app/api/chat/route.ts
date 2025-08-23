@@ -16,7 +16,7 @@ export async function POST(req: NextRequest) {
 
     if (USE_MOCK) {
       // Mock GPT response for testing
-      const reply = `Mock reply: "${message}"`;
+      const reply = `"${message}"`;
       return NextResponse.json({ reply });
     }
 
@@ -47,7 +47,7 @@ export async function POST(req: NextRequest) {
     });
 
     const data = await response.json();
-    const reply = data?.choices?.[0]?.message?.content || "Sorry, I couldn't generate a response.";
+    const reply = data?.choices?.[0]?.message?.content || "Sorry, GPT couldn't generate a response. Please kindly contact me via email instead.";
 
     return NextResponse.json({ reply });
     } catch (error) {

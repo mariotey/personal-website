@@ -47,12 +47,12 @@ export default function Chat() {
         <div className="bg-gray-200 min-h-screen flex flex-col items-center p-6">
             <h1 className="text-3xl font-bold mb-6 text-center text-blue-900">HR Chat with GPT</h1>
 
-            {/* Chat container with 80% width */}
+            {/* Chat container with fixed width and height */}
             <div className="w-full max-w-[80%] flex-1 flex flex-col overflow-y-auto mb-4 space-y-3" style={{ maxHeight: '70vh' }}>
                 {messages.map((msg, idx) => (
                     <div
                     key={idx}
-                    className={`p-3 rounded-lg max-w-[70%] ${
+                    className={`p-3 rounded-lg max-w-[70%] break-words whitespace-pre-wrap overflow-hidden ${
                         msg.sender === "You"
                         ? "bg-blue-100 text-gray-900 ml-auto"
                         : "bg-transparent text-gray-800 mx-auto text-justify border border-transparent"
