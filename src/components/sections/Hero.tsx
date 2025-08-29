@@ -27,12 +27,6 @@ export default function Hero() {
 
         <div className="mt-6 space-x-4">
             <a
-            href="/chat"
-            className="px-6 py-2 bg-blue-600 text-white rounded-lg shadow hover:bg-blue-700 transition-colors"
-            >
-            Try my GPT!
-            </a>
-            <a
             href="/contact"
             className="px-6 py-2 bg-blue-600 text-white rounded-lg shadow hover:bg-blue-700 transition-colors"
             >
