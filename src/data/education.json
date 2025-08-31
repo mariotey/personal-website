@@ -7,7 +7,21 @@
         "end_date": "Sep 2024",
         "description": [
             "Champion Group for the NUS-NCS Innovation Challenge",
+            "Interned at Johnson & Johnson and MDesign Engineering Pte Ltd",
             "Participated in WorldQuant Alphathon 2023, Philip Nova Trading Challenge 2023, Hack & Roll 2024, Hack4Good 2024"
+        ],
+        "co_curricular": [],
+        "awards": [],
+        "modules_taken": [
+            "BT5110: Data Management and Warehousing",
+            "DBA5101: Analytics in Managerial Economics",
+            "DBA5103: Operations Research and Analytics",
+            "DBA5106: Foundation in Business Analytics",
+            "DBA5102: Business Analytics Capstone Project",
+            "BT5151: Advanced Analytics and Machine Learning",
+            "CS5224: Cloud Computing",
+            "DBA5104: Introduction to Network Science & Analytics",
+            "DBA5109: Quantitative Risk Management"
         ]
     },
     {
@@ -18,8 +32,45 @@
         "end_date": "2023",
         "description": [
             "Candidate of NUS Engineering Scholars Programme and University Town College Programme",
+            "Interned at Unternehmer TUM MakerSpace GmbH (Munich)",
             "Developed Prehabilitative Gait Analysis Tool with Computer Vision Capabilities",
             "Developed Soft Tactile Sensor for Human-computer Interaction and Gaming"
+        ],
+        "co_curricular": [
+            "RC4 Rock Climbing - Logistics Head"
+        ],
+        "awards": [],
+        "modules_taken": [
+            "BN2102: Bioengineering Data Analysis",
+            "BN2201: Quantitative Physiology for Bioengineers",
+            "BN2204: Fundamentals of Biomechanics",
+            "BN2301: Biochemistry and Biomaterials for Bioengineers",
+            "BN2403: Fundamentals of Biosignals and Bioinstrumentation",
+            "BN3101: Biomedical Engineering Design",
+            "BN3402: Bio-analytics of Engineers",
+            "BN4101: B.Eng. Dissertation",
+            "BN4203: Robotics in Rehabilitation",
+            "BN4302: Organs in a Dish (Organoid Bioengineering)",
+            "BN4701: Serious Games for Health",
+            "MA1301: Introductory Mathematics",
+            "MA1511: Engineering Calculus",
+            "MA1512: Differential Equations for Engineering",
+            "MA1513: Linear Algebra with Differential Equations",
+            "EG2101: Pathways to Engineering Leadership",
+            "EG2605: Undergraduate Research Opportunities Programme",
+            "GEA1000: Quantitative Reasoning with Data",
+            "EE2211: Introduction to Machine Learning",
+            "CM1417: Fundamentals of Chemistry",
+            "ES1103: English for Academic Purposes",
+            "PC1432: Physics IIE",
+            "MLE1010: Materials Engineering Principles & Practices",
+            "UTW1001E: From Human to 'Posthuman'",
+            "UTW2001Z: The Semiotics of Colour",
+            "UTC1702E: Thinking in Systems (Energy Systems)",
+            "UTC2703: Infectious Diseases (Dynamics, Strategies and Policies)",
+            "UTS2711: Religion, Governance and Policymaking in Singapore",
+            "TR3202S: Start-up Internship Programme",
+            "TR3204S: Entrepreneurship Practicum (Short)"
         ]
     },
     {
@@ -29,9 +80,57 @@
         "start_date": "2015",
         "end_date": "2018",
         "description": [
-            "Candidate of Ngee Ann Polytechnic Engineering Scholarship",
+            "Candidate of AY2017/2018 Ngee Ann Polytechnic Engineering Scholarship",
+            "Interned at Karl Storz Endoscopy Singapore Sales Pte Ltd",
             "Developed medical device for Nasogastric Intubation via Air Bolus Injection",
             "Developed Essential Life Monitoring Operating (ELMO) System"
+        ],
+        "co_curricular": [
+            "Rotaract Club - International Service Director",
+            "National Police Cadet Corp - Cadet Inspector",
+            "BP-NP Mentoring Club - Member"
+        ],
+        "awards": [
+            "Biomedical Engineering Society (Singapore) Gold Medal & Prize",
+            "The Lee Kuan Yew Award for Mathematics and Science",
+            "Ngee Ann Polytechnic Outstanding Achievement Award",
+            "Equipment Medical Prize for Outstanding Performance in 'BME Project Design'",
+            "Smitech Prize for Most Outstanding Academic Performance in the Diploma in Biomedical Engineering Course",
+            "Tan Kah Kee Young Inventors' Award - Senior Student Section Merit Award",
+            "11th Biomedical Engineering Society Scientific Meeting Symposium - Bronze Award"
+        ],
+        "modules_taken": [
+            "Introduction to Biomedical Engineering",
+            "Biophysics",
+            "Engineering Mechanics",
+            "Physiological Systems",
+            "Cell & Molecular Biology",
+            "Healthcare IT",
+            "Diagnostic, Therapeutic & Lab Equipment",
+            "Medical Instrumentation",
+            "Clinical Engineering",
+            "BME Project Design",
+            "Engineering Mathematics 1, 2 & 3A",
+            "Computer Engineering",
+            "Application Programming",
+            "Electrical Technology",
+            "ELN Measurement & Prototyping Skills",
+            "Digital Logic",
+            "Discrete Analogue Electronics",
+            "Digital Electronics",
+            "Electronic Design Prototyping 1 & 2",
+            "Embedded System (ARM)",
+            "Fundamentals of Control Systems",
+            "Sports & Wellness",
+            "Basic Japanese 101",
+            "Man and Machines",
+            "Career and Professional Preparation 1 & 2",
+            "World Issues: A Singapore Perspective",
+            "Communication & Contemporary Issues",
+            "Innovation Toolkit: Acquiring & Applying the Skills",
+            "Overseas Merit Fellowship",
+            "Overseas Immersion Experience",
+            "6-month Internship"
         ]
     }
 ]
