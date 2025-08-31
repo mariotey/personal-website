@@ -14,11 +14,11 @@ interface ProjectItem {
 }
 
 interface Props {
-  params: { project_name: string };
+  params: Promise<{ project_name: string }>;
 }
 
 export default function ProjectDetail({ params }: Props) {
-  const { project_name } = params;
+  const { project_name } = React.use(params);
   const router = useRouter();
   const [currentIndex, setCurrentIndex] = React.useState(0);
 
