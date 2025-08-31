@@ -22,7 +22,7 @@ export default function Projects() {
                     rel="noopener noreferrer"
                     className="text-blue-600 hover:text-blue-700 hover:underline"
                     >
-                    View on GitHub →
+                    View more...
                     </a>
                 </div>
                 ))}

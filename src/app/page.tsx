@@ -1,4 +1,5 @@
 import Hero from "../components/sections/Hero";
+import Education from "../components/sections/Education";
 import WorkExperience from "../components/sections/WorkExperience";
 import Project from "../components/sections/Projects";
 import Skills from "../components/sections/Skills";
@@ -17,11 +18,14 @@ export default function Home() {
           {/* Work Experience Section */}
           <WorkExperience/>
 
-          {/* Skills Section */}
-          <Skills/>
+          {/* Education Section */}
+          <Education/>
 
           {/* Projects Section */}
           <Project/>
+
+          {/* Skills Section */}
+          <Skills/>
 
           {/* Contact Section */}
           <Contact/>

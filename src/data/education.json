@@ -1,0 +1,34 @@
+[
+    {
+        "name": "MSc in Business Analytics",
+        "institution": "National University of Singapore",
+        "start_date": "Aug 2023",
+        "end_date": "Sep 2024",
+        "description": [
+            "Champion Group for the NUS-NCS Innovation Challenge",
+            "Participated in WorldQuant Alphathon 2023, Philip Nova Trading Challenge 2023, Hack & Roll 2024, Hack4Good 2024"
+        ]
+    },
+    {
+        "name": "BEng in Biomedical Engineering",
+        "institution": "National University of Singapore",
+        "start_date": "2020",
+        "end_date": "2023",
+        "description": [
+            "Candidate of NUS Engineering Scholars Programme and University Town College Programme",
+            "Developed Prehabilitative Gait Analysis Tool with Computer Vision Capabilities",
+            "Developed Soft Tactile Sensor for Human-computer Interaction and Gaming"
+        ]
+    },
+    {
+        "name": "Diploma in Biomedical Engineering",
+        "institution": "Ngee Ann Polytechnic",
+        "start_date": "2015",
+        "end_date": "2018",
+        "description": [
+            "Candidate of Ngee Ann Polytechnic Engineering Scholarship",
+            "Developed medical device for Nasogastric Intubation via Air Bolus Injection",
+            "Developed Essential Life Monitoring Operating (ELMO) System"
+        ]
+    }
+]

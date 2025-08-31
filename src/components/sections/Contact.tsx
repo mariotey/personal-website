@@ -42,7 +42,7 @@ export default function Contact() {
                         className="w-6 h-6 object-contain"
                         />
                     ) : (
-                        <div className="w-6 h-6" /> // placeholder
+                        <div className="w-6 h-6" />
                     )}
 
                     {/* Contact text */}
