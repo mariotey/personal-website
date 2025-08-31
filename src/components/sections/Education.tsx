@@ -1,6 +1,6 @@
+import Link from "next/link";
 import Divider from "../ui/Divider";
 import educationData from "../../data/education.json";
-import Link from "next/link";
 
 export default function Education() {
     return (
@@ -15,7 +15,7 @@ export default function Education() {
                             key={edu.name}
                             className="p-6 border rounded-lg shadow-sm bg-gray-50 hover:shadow-md text-left transition-shadow"
                         >
-                            <h4 className="text-xl font-semibold mb-2 text-gray-900">{edu.name}</h4>
+                            <h4 className="text-l font-semibold mb-2 text-gray-900">{edu.name}</h4>
                             <p className="text-gray-700 mb-4">{edu.institution}</p>
                             <Link href={`/education/${edu.cert}`}>
                                 <span className="text-blue-600 hover:text-blue-700 hover:underline cursor-pointer">
