@@ -48,7 +48,7 @@ export default function Education() {
             >
               {/* Institution Image */}
               {certs[0].instituition_image && (
-                <div className="w-28 h-28 bg-white rounded-full flex items-center justify-center mb-4 overflow-hidden shadow-sm">
+                <div className="w-30 h-30 bg-white rounded-full flex items-center justify-center overflow-hidden shadow-sm">
                   <img
                     src={certs[0].instituition_image}
                     alt={`${institution} logo`}
