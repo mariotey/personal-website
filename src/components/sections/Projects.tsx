@@ -17,10 +17,20 @@ export default function Projects() {
   const [touchStartY, setTouchStartY] = useState(0);
   const [touchEndX, setTouchEndX] = useState(0);
   const [isInteracting, setIsInteracting] = useState(false);
+  const [pageSize, setPageSize] = useState(3);
 
-  const pageSize = 3;
+  // Adjust page size based on screen width
+  useEffect(() => {
+    const updatePageSize = () => {
+      if (window.innerWidth < 640) setPageSize(2); // mobile
+      else setPageSize(3); // larger screens
+    };
+    updatePageSize();
+    window.addEventListener("resize", updatePageSize);
+    return () => window.removeEventListener("resize", updatePageSize);
+  }, []);
+
   const totalPages = Math.ceil(projectsData.length / pageSize);
-
   useEffect(() => {
     setMounted(true);
   }, []);
