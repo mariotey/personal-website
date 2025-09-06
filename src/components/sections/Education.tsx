@@ -1,34 +1,74 @@
+import Card from "../ui/Card";
 import Link from "next/link";
 import Divider from "../ui/Divider";
 import educationData from "../../data/education.json";
 
-export default function Education() {
-    return (
-        <>
-            <section className="mt-20 mb-20 max-w-7xl mx-auto text-center">
-                <h3 className="text-2xl font-semibold mb-6" style={{ color: '#0f1f4f' }}>
-                    Education
-                </h3>
-                <div className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-3 gap-8 text-gray-600">
-                    {educationData.map((edu) => (
-                        <div
-                            key={edu.name}
-                            className="p-6 border rounded-lg shadow-sm bg-gray-50 hover:shadow-md text-left transition-shadow"
-                        >
-                            <h4 className="text-l font-semibold mb-2 text-gray-900">{edu.name}</h4>
-                            <p className="text-gray-700 mb-4">{edu.institution}</p>
-                            <Link href={`/education/${edu.cert}`}>
-                                <span className="text-blue-600 hover:text-blue-700 hover:underline cursor-pointer">
-                                    View more...
-                                </span>
-                            </Link>
-                        </div>
-                    ))}
-                </div>
-            </section>
+interface EducationItem {
+  name: string;
+  institution: string;
+  instituition_image: string,
+  cert: string;
+  start_date: string;
+  end_date: string;
+  description: string[];
+  co_curricular: string[];
+  awards: string[];
+  modules_taken: string[];
+}
 
-            {/* Divider */}
-            <Divider/>
-        </>
+export default function Education() {
+  // Group by institution
+  const groupedByInstitution: { [key: string]: EducationItem[] } = educationData.reduce(
+    (acc: { [key: string]: EducationItem[] }, edu: EducationItem) => {
+        if (!acc[edu.institution]) {
+        acc[edu.institution] = [];
+        }
+        acc[edu.institution].push(edu);
+        return acc;
+    },
+    {}
     );
+
+  return (
+    <>
+      <section className="mt-20 mb-20 max-w-7xl mx-auto text-center">
+        <h3 className="text-2xl font-semibold mb-6" style={{ color: "#0f1f4f" }}>
+          Education
+        </h3>
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 text-gray-600">
+          {Object.entries(groupedByInstitution).map(([institution, certs]) => (
+            <Card
+              key={institution}
+              className="flex flex-col items-center"
+            >
+              {/* Institution Image */}
+              {certs[0].instituition_image && (
+                <div className="w-28 h-28 bg-white rounded-full flex items-center justify-center mb-4 overflow-hidden shadow-sm">
+                  <img
+                    src={certs[0].instituition_image}
+                    alt={`${institution} logo`}
+                    className="max-w-full max-h-full"
+                  />
+                </div>
+              )}
+
+              {/* Education Certifications */}
+              <div className="grid grid-cols-1 gap-3 justify-items-center w-full max-w-xs">
+                {certs.map((cert) => (
+                  <Link key={cert.cert} href={`/education/${cert.cert}`} className="w-full">
+                    <span className="block w-full text-center px-4 py-2 rounded-full border border-gray-300 cursor-pointer hover:bg-gray-100 text-lg">
+                      {cert.name}
+                    </span>
+                  </Link>
+                ))}
+              </div>
+            </Card>
+          ))}
+        </div>
+      </section>
+
+      {/* Divider */}
+      <Divider />
+    </>
+  );
 }

@@ -10,8 +10,9 @@ import Footer from "../components/ui/Footer";
 export default function Home() {
   return (
     <div className="bg-gray-200 min-h-screen">
-      {
-        <div>
+
+        <div className="px-4 md:px-12 lg:px-24">
+
           {/* Hero Section */}
           <Hero/>
 
@@ -29,11 +30,13 @@ export default function Home() {
 
           {/* Contact Section */}
           <Contact/>
+        </div>
 
+        <div>
           {/* Footer */}
           <Footer />
         </div>
-      }
+
     </div>
 
   );

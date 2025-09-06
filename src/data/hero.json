@@ -1,7 +1,8 @@
 {
     "firstName": "Tey",
     "lastName": "Ming Chuan",
-    "title": "Data Scientist · Machine Learning Engineer",
+    "fullName": "Tey Ming Chuan",
+    "title": "Data Scientist",
     "description": "I build data-driven solutions in forecasting and MLOps. Passionate about transforming complex problems into scalable ML tools.",
     "profile_pic": "/images/profile.jpg"
 }

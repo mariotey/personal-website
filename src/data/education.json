@@ -2,6 +2,7 @@
     {
         "name": "MSc in Business Analytics",
         "institution": "National University of Singapore",
+        "instituition_image": "/images/NUSIcon.png",
         "cert": "masters",
         "start_date": "Aug 2023",
         "end_date": "Sep 2024",
@@ -27,6 +28,7 @@
     {
         "name": "BEng in Biomedical Engineering",
         "institution": "National University of Singapore",
+        "instituition_image": "/images/NUSIcon.png",
         "cert": "degree",
         "start_date": "2020",
         "end_date": "2023",
@@ -76,6 +78,7 @@
     {
         "name": "Diploma in Biomedical Engineering",
         "institution": "Ngee Ann Polytechnic",
+        "instituition_image": "/images/NgeeAnnPolyIcon.gif",
         "cert": "diploma",
         "start_date": "2015",
         "end_date": "2018",
