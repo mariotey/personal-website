@@ -14,7 +14,9 @@ export default function Projects() {
   const [currentPage, setCurrentPage] = useState(0);
   const [isHovering, setIsHovering] = useState(false);
   const [touchStartX, setTouchStartX] = useState(0);
+  const [touchStartY, setTouchStartY] = useState(0);
   const [touchEndX, setTouchEndX] = useState(0);
+  const [isInteracting, setIsInteracting] = useState(false);
 
   const pageSize = 3;
   const totalPages = Math.ceil(projectsData.length / pageSize);
@@ -25,14 +27,14 @@ export default function Projects() {
 
   // Reset interval whenever currentPage changes or hover state changes
   useEffect(() => {
-    if (isHovering) return; // skip if hovering
+    if (isHovering || isInteracting) return;
 
     const interval = setInterval(() => {
       setCurrentPage((prev) => (prev + 1) % totalPages);
     }, 7000);
 
     return () => clearInterval(interval);
-  }, [currentPage, isHovering, totalPages]); // all stable values
+  }, [currentPage, isHovering, isInteracting, totalPages]);
 
   if (!mounted) return null;
 
@@ -47,15 +49,25 @@ export default function Projects() {
   // Touch handlers for swipe
   const handleTouchStart = (e: React.TouchEvent) => {
     setTouchStartX(e.targetTouches[0].clientX);
+    setTouchStartY(e.targetTouches[0].clientY);
+    setIsInteracting(true); // pause auto-swipe
   };
+
   const handleTouchMove = (e: React.TouchEvent) => {
     setTouchEndX(e.targetTouches[0].clientX);
   };
-  const handleTouchEnd = () => {
-    const distance = touchStartX - touchEndX;
+
+  const handleTouchEnd = (e: React.TouchEvent) => {
+    const dx = touchStartX - touchEndX;
+    const dy = touchStartY - e.changedTouches[0].clientY; // vertical movement
     const threshold = 50;
-    if (distance > threshold) nextPage();
-    else if (distance < -threshold) prevPage();
+
+    if (Math.abs(dx) > Math.abs(dy) && Math.abs(dx) > threshold) {
+      if (dx > 0) nextPage();
+      else prevPage();
+    }
+
+    setIsInteracting(false); // resume auto-swipe
   };
 
   return (
