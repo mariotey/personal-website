@@ -85,7 +85,7 @@ export default function Projects() {
                   onClick={prevPage}
                   className="bg-gray-800 text-white rounded-full p-2 opacity-75 hover:opacity-100 transition z-20"
                 >
-                  &#8592;
+                  ◀
                 </button>
               )}
             </div>
@@ -141,7 +141,7 @@ export default function Projects() {
                   onClick={nextPage}
                   className="bg-gray-800 text-white rounded-full p-2 opacity-75 hover:opacity-100 transition z-20"
                 >
-                  &#8594;
+                  ▶
                 </button>
               )}
             </div>
