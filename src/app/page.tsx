@@ -1,14 +1,26 @@
+"use client";
+
+import { useEffect } from "react";
+
 import Hero from "../components/main/Hero";
 
-import Education from "../components/sections/Education";
-import WorkExperience from "../components/sections/WorkExperience";
-import Project from "../components/sections/Projects";
-import Skills from "../components/sections/Skills";
-import Contact from "../components/sections/Contact";
+import Education from "../components/main/Education";
+import WorkExperience from "../components/main/WorkExperience";
+import Project from "../components/main/Projects";
+import Skills from "../components/main/Skills";
+import Contact from "../components/main/Contact";
 
 import Footer from "../components/ui/Footer";
 
 export default function Home() {
+  useEffect(() => {
+    const scrollPos = sessionStorage.getItem("homeScroll");
+    if (scrollPos) {
+      window.scrollTo(0, parseInt(scrollPos, 10));
+      sessionStorage.removeItem("homeScroll"); // optional, clean up
+    }
+  }, []);
+
   return (
     <div className="bg-gray-200 min-h-screen">
 
@@ -39,6 +51,5 @@ export default function Home() {
         </div>
 
     </div>
-
   );
 }

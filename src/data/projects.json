@@ -3,60 +3,127 @@
         "name": "Image-based Movie Recommender",
         "project_name": "Recommender",
         "short_description": "Image-based recommender system with user interaction",
-        "long_description": "",
+        "long_description": [
+            "This project explores both Collaborative Filtering and Content-Based Filtering.",
+            "Collaborative Filtering recommends items to a user based on the preferences and behaviors of similar users. It assumes that if two users liked similar items in the past, they will likely enjoy similar items in the future. Unlike other methods, collaborative filtering does not require item metadata. It relies entirely on the user-item interaction matrix (e.g., ratings, likes, clicks).",
+            "Content-Based Filtering recommends items based on the features of the items themselves and a user’s past preferences. It builds a personalized profile by analyzing what the user liked before (e.g., genres, tags, actors in movies) and recommends items with similar characteristics."
+        ],
         "thumbnail_url":"",
         "media": [],
-        "github_link": "https://github.com/mariotey/Recommender"
+        "link": [
+            {
+                "src": "https://github.com/mariotey/Recommender",
+                "icon": "/images/githubIcon.gif",
+                "link_type": "github"
+            }
+        ]
     },
     {
         "name": "Volunteering App - Connect4Good",
         "project_name": "connect4good",
         "short_description": "Connects volunteers to causes they love, analyzing profiles to tailor tasks for event success",
-        "long_description": "",
+        "long_description": [
+            "Connect4Good is a volunteer matching application designed to connect individuals with causes they are passionate about. It analyzes volunteer profiles and event descriptions to facilitate meaningful connections. Subsequently it generates personalized tasks for volunteers tailored to each matched event. Whether you're organizing a community cleanup, a fundraising gala, or a charity run, Connect4Good helps you find the right volunteers with the right skills and interests to make your event a success."
+        ],
         "thumbnail_url":"/images/projectThumbnail/Connect4Good.png",
         "media": [],
-        "github_link": "https://github.com/mariotey/Connect4Good"
+        "link": [
+            {
+                "src": "https://github.com/mariotey/Connect4Good",
+                "icon": "/images/githubIcon.gif",
+                "link_type": "github"
+            },
+            {
+                "src": "https://devpost.com/software/connect4good",
+                "icon": "/images/devpostIcon.png",
+                "link_type": "devpost"
+            }
+        ]
     },
     {
         "name": "Cloud Data Analytics Tool - Reko",
         "project_name": "reko",
         "short_description": "Data Analytics Tool leveraging on AWS Cloud services",
-        "long_description": "",
+        "long_description": [
+            "REKO is a Software as a Service (SaaS) platform that offers bespoke solutions to businesses looking to leverage customer and survey data for strategic decision-making. In today's data-saturated digital landscape, REKO aims to democratise data analytics by simplifying complex datasets into intuitive, visually engaging insights, making data analytics accessible to businesses of all sizes. To address the limitations of existing tools, REKO distinguishes itself by offering an intuitive user interface and visually captivating representations. It operates on a scalable and affordable freemium subscription model, which makes it accessible to businesses of all scales. The platform is hosted on AWS, utilising a robust suite of services to ensure scalability, reliability, and security. We are positioned to capture significant market share in an era that demands data-driven decision-making. The company plans future enhancements, including advanced analytics and a tiered subscription model, to solidify its leadership in data visualisation and analytics by providing unmatched value to users and stakeholders."
+        ],
         "thumbnail_url":"/images/projectThumbnail/rekoIcon.png",
-        "media": [],
-        "github_link": "https://github.com/mariotey/reko"
+        "media": [
+            "https://drive.google.com/file/d/1OqkFiOGmbmiFrWn3mwCoS6QEpPv1yESn/preview",
+            "https://drive.google.com/file/d/1Zek5xoW24tFCaXsBX3besUgwbhmVl08z/preview",
+            "https://drive.google.com/file/d/1d7eEGhbnq4xbNmB4rWVUVmpeblvBTjOP/preview"
+        ],
+        "link": [
+            {
+                "src": "https://github.com/mariotey/reko",
+                "icon": "/images/githubIcon.gif",
+                "link_type": "github"
+            }
+        ]
     },
     {
         "name": "Robotic Walking Buddy for Prehabilitation",
         "project_name": "walk-e",
         "short_description": "Assistive Medical Device for Patient Prehabilitation",
-        "long_description": "",
+        "long_description": [
+            "Prehabilitation is an intervention that is introduced prior to surgery to raise a patient’s functional capacity and reduce their risk of post-surgical complications. To evaluate a patient’s recovery and the effectiveness of the prehabilitative programme, gait analysis is often employed, particularly for patients undergoing lower limb surgery.",
+            "Unfortunately, conventional gait analysis methods such as motion capture system, EMG sensors and force plates require specialized environment and significant investment of both finances and human resources to set up, maintain and analyze. As not all hospitals have dedicated gait labs, it may be challenging for patients with mobility issues to travel to these specialized labs for gait analysis. Moreover, the placement of reflective markers can be uncomfortable for patients and their sweat could render the markers useless. It can also be a time-consuming and arduous process for healthcare providers that need to perform gait analysis on large numbers of patients.",
+            "Hence, this project seeks to address these challenges by exploring the feasibility of integrating MediaPipe’s 3D human pose estimation into a wheeled robot for gait analysis. The wheeled robot will be equipped with a Raspberry Pi, web camera, and optical encoders to physically guide patients along a curated route and provide quick analytics of patient’s lower limb performance. This approach not only minimizes the amount of specialized equipment needed for analysis but also make gait analysis more accessible, comfortable and efficient for patients and healthcare providers. Unlike conventional methods of analysis, the wheeled robot is unique in that it can be self-administered which further reduces the need for large number of healthcare providers. Given the diverse range of patients receiving lower limb surgeries and the increasing aging population, this robot may have the potential to benefit a larger population besides prehabilitative patients and advance innovation in the field of gait analysis."
+        ],
         "thumbnail_url":"/images/projectThumbnail/Walk-E.png",
-        "media": [],
-        "github_link": "https://github.com/mariotey/Walk-E"
+        "media": [
+            "https://drive.google.com/file/d/1CXyJDNLBxuBRwnjO2Za4oevwNZYxqkP4/preview",
+            "https://drive.google.com/file/d/1741cqLF_BZWLqHXHxJm2MgrhRk_Tm4eP/preview",
+            "https://drive.google.com/file/d/155z9wywgoDe4J5Q6VC_u5zKdOKNPPhO1/preview",
+            "https://drive.google.com/file/d/1sxB-JwM0gaOtGODT_nzD-NeHV4ka4BdM/preview"
+        ],
+        "link": [
+            {
+                "src": "https://github.com/mariotey/Walk-E",
+                "icon": "/images/githubIcon.gif",
+                "link_type": "github"
+            }
+        ]
     },
     {
         "name": "Soft Tactile Sensors for Computer Gaming",
         "project_name": "soft-tactile-sensor",
         "short_description": "Innovative Sensors for Interactive Human-Computer experience",
-        "long_description": "",
+        "long_description": [
+            "As technology continues to advance, it spurs the growth of technological innovation. One such innovation would be wearable input devices whichc are gaining popularity with the evolution of portable computing and gaming, particularly in the development of Virtual and Augmented Reality. Other than providing navigation, text and control functionalities, these devices are equipped with sensors that possess certain characteristics such as low latency and small form factor. While recent VR gaming devices have done well in providing users with immersive experiences by engaging their visual and auditory senses, the engagement of touch is limited. Moreover, some VR gaming devices can be tedious and time-consuming to set up and specific toward certain applications.",
+            "As such, this project aims to develop a soft, tactile, wearable gaming input device that is easily operable through touch, has low latency and low form factor, and provide users with a pleasant and comfortable gaming experience. The device will allow users to have a more immersive experience with games, while also showcasing the potential of soft tactile sensing in VR gaming applications. The development of capacitive tactile sensors and their application as a wearable keyboard/gaming glove will be explored in this project, along with the design of its circuitry and the prototyping of the gaming gloves. The project will also involve C programming on Arduino with Teensyduino extensions.",
+            "By embarking on this project, it hopes to inspire further developments in VR gaming devices to provide users with better immersive gaming experiences. This project aims to be a stepping stone towards the development of VR gaming input devices that improve the immersive gaming experience by showcasing the potential of soft tactile sensing in VR gaming applications."
+        ],
         "thumbnail_url":"/images/projectThumbnail/sleeve-button.jpg",
         "media":[
             "https://drive.google.com/file/d/1jutUX28qBUvQiqrofMNvhlVeR5X6Fzl5/preview",
             "https://drive.google.com/file/d/1Z9KqAA0TGZmETsB0DjC9LzJIO_TDxuKN/preview",
             "https://drive.google.com/file/d/1vN7mJ6amsZL-UN4QXJy42SaKShy0SCHg/preview"
         ],
-        "github_link": "https://github.com/mariotey/Soft-Tactile-Sensor"
+        "link": [
+            {
+                "src": "https://github.com/mariotey/Soft-Tactile-Sensor",
+                "icon": "/images/githubIcon.gif",
+                "link_type": "github"
+            }
+        ]
     },
     {
         "name": "Assistive Tool for Nasogastric Intubation",
         "project_name": "nasogastric-intubation",
         "short_description": "Novel Diagnostic Medical Device for Assisting Nasogastric Intubation",
-        "long_description": "",
+        "long_description": [
+            "This invention aids in the verification of the nasogastric tube during nasogastric intubation by using air bolus injection. It is envisaged to be a smart device with high sensitivity, easy to use and contaminant free. In addition, the invention hopes to integrate seamlessly into existing workflow and be a cheaper, safer, convenient and faster alternative for verification.",
+            "Numerous complications can occur during the process of Nasogastric Intubation such as the tube ending up in a lung or coiled in the esophagus. Currently the gold standard of verifying correct tube placement is the Chest X-Ray. However, it is expensive, limited to hospital use, not 100% accurate and harmful due to ionising radiation. Other existing methods are bedside methods such as pH of stomach aspirate, swoosh test, and colorimetric capnography but they have low sensitivity. (For e.g. even the recent colorimetric capnography could only achieve 80% accuracy when used in the general ward.)",
+            "The invention utilises backpressure measurements while using an air pump to inject air boli to the tip of the nasogastric tube to sense its location. A microcontroller is used to control the air pump and solenoid valve to work singly in order to provide air boli injections. When the nasogastric tube is inserted into an enclosed body cavity, some of the pressure from the air bolus would travel back to the device. With high sensitivity pressure transducers and a Kentech LCD programmed to show graphical representation of pressure measurements, a software algorithm is used to interpret the pressure received and evaluate the location of the nasogastric tube. The device allows administrator to continuously monitor the entire insertion process and make immediate corrections should the tube transverses incorrectly."
+        ],
         "thumbnail_url":"/images/projectThumbnail/nasogastricintubation.jpg",
         "media":[
+            "https://drive.google.com/file/d/1NtFdr7GFX_CmBwukJX8TJAuOQ10JHSTz/preview",
+            "https://drive.google.com/file/d/1FyGzgwlAHE2EUN3uJxcyn-ePOJp7zw6Z/preview",
+            "https://drive.google.com/file/d/1eeN0cY4oZeb3U-3p29KsZRNPWxBlkXA9/preview",
             "https://drive.google.com/file/d/1RTG9bsx28XAWoLgX70YIc3uQeOnv6WZh/preview"
         ],
-        "github_link": ""
+        "link": []
     }
 ]
