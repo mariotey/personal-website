@@ -40,7 +40,7 @@ export default function Education() {
   return (
     <>
       <Section title="Education">
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 text-gray-600">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 text-gray-600 max-w-4xl mx-auto">
           {Object.entries(groupedByInstitution).map(([institution, certs]) => (
             <Card
               key={institution}

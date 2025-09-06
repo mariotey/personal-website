@@ -1,33 +1,37 @@
 [
     {
-        "name": "Movie Recommendation System",
+        "name": "Image-based Movie Recommender",
         "project_name": "Recommender",
         "short_description": "Image-based recommender system with user interaction",
         "long_description": "",
+        "thumbnail_url":"",
         "media": [],
         "github_link": "https://github.com/mariotey/Recommender"
     },
     {
-        "name": "Connect4Good",
+        "name": "Volunteering App - Connect4Good",
         "project_name": "connect4good",
         "short_description": "Connects volunteers to causes they love, analyzing profiles to tailor tasks for event success",
         "long_description": "",
+        "thumbnail_url":"/images/projectThumbnail/Connect4Good.png",
         "media": [],
         "github_link": "https://github.com/mariotey/Connect4Good"
     },
     {
-        "name": "Reko",
+        "name": "Cloud Data Analytics Tool - Reko",
         "project_name": "reko",
         "short_description": "Data Analytics Tool leveraging on AWS Cloud services",
         "long_description": "",
+        "thumbnail_url":"/images/projectThumbnail/rekoIcon.png",
         "media": [],
         "github_link": "https://github.com/mariotey/reko"
     },
     {
-        "name": "Walk-E",
+        "name": "Robotic Walking Buddy for Prehabilitation",
         "project_name": "walk-e",
         "short_description": "Assistive Medical Device for Patient Prehabilitation",
         "long_description": "",
+        "thumbnail_url":"/images/projectThumbnail/Walk-E.png",
         "media": [],
         "github_link": "https://github.com/mariotey/Walk-E"
     },
@@ -36,6 +40,7 @@
         "project_name": "soft-tactile-sensor",
         "short_description": "Innovative Sensors for Interactive Human-Computer experience",
         "long_description": "",
+        "thumbnail_url":"/images/projectThumbnail/sleeve-button.jpg",
         "media":[
             "https://drive.google.com/file/d/1jutUX28qBUvQiqrofMNvhlVeR5X6Fzl5/preview",
             "https://drive.google.com/file/d/1Z9KqAA0TGZmETsB0DjC9LzJIO_TDxuKN/preview",
@@ -44,10 +49,11 @@
         "github_link": "https://github.com/mariotey/Soft-Tactile-Sensor"
     },
     {
-        "name": "Nasogastric Intubation via Air Bolus Injection",
+        "name": "Assistive Tool for Nasogastric Intubation",
         "project_name": "nasogastric-intubation",
         "short_description": "Novel Diagnostic Medical Device for Assisting Nasogastric Intubation",
         "long_description": "",
+        "thumbnail_url":"/images/projectThumbnail/nasogastricintubation.jpg",
         "media":[
             "https://drive.google.com/file/d/1RTG9bsx28XAWoLgX70YIc3uQeOnv6WZh/preview"
         ],

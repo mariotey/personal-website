@@ -20,37 +20,37 @@ export default function Contact() {
     return (
         <>
             <Section title="Contact Details">
-                <div>
+                <div className="max-w-lg mx-auto space-y-3 text-center">
                     {contactData.map((contactInfo) => {
                     const iconSrc = contactInfo.icon || null;
 
                     return (
                         <div
-                            key={contactInfo.type}
-                            className="flex items-center justify-center space-x-3 text-gray-700 cursor-pointer hover:bg-gray-100 p-2 rounded group"
-                            onClick={() => handleCopy(contactInfo.contact, contactInfo.type)}
+                        key={contactInfo.type}
+                        className="flex items-center justify-center space-x-3 text-gray-700 cursor-pointer hover:bg-gray-100 p-2 rounded group break-all"
+                        onClick={() => handleCopy(contactInfo.contact, contactInfo.type)}
                         >
-                            {/* Icon */}
-                            {iconSrc ? (
-                                <img
-                                src={iconSrc}
-                                alt={contactInfo.type}
-                                className="w-6 h-6 object-contain"
-                                />
-                            ) : (
-                                <div className="w-6 h-6" />
-                            )}
+                        {/* Icon */}
+                        {iconSrc ? (
+                            <img
+                            src={iconSrc}
+                            alt={contactInfo.type}
+                            className="w-6 h-6 object-contain"
+                            />
+                        ) : (
+                            <div className="w-6 h-6" />
+                        )}
 
-                            {/* Contact text */}
-                            <span>{contactInfo.contact}</span>
+                        {/* Contact text */}
+                        <span className="break-all">{contactInfo.contact}</span>
 
-                            {/* Copy icon */}
-                            <ClipboardIcon className="w-5 h-5 text-gray-400 group-hover:text-gray-600" />
+                        {/* Copy icon */}
+                        <ClipboardIcon className="w-5 h-5 text-gray-400 group-hover:text-gray-600" />
                         </div>
                     );
                     })}
                 </div>
-            </Section>
+                </Section>
 
             {/* Divider */}
             <Divider />
