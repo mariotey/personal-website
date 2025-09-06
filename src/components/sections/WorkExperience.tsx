@@ -19,7 +19,7 @@ export default function WorkExperience() {
                             <h5 className="text-gray-700 font-medium">{exp.company}</h5>
                         </div>
                         {/* Employment Years */}
-                        <span className="text-sm text-gray-800 font-medium mt-2 sm:mt-0">{exp.year}</span>
+                        <span className="text-left sm:text-right text-sm text-gray-800 font-medium mt-2 sm:mt-0">{exp.year}</span>
                     </div>
                     {/* Description */}
                     <ul className="list-disc list-outside ml-6 text-gray-700 text-sm mt-3 space-y-2 text-justify">
