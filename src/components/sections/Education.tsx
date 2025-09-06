@@ -1,6 +1,11 @@
+"use client";
+
+import { useRouter } from "next/navigation";
+
 import Card from "../ui/Card";
-import Link from "next/link";
+import Button from "../ui/Button";
 import Divider from "../ui/Divider";
+
 import educationData from "../../data/education.json";
 
 interface EducationItem {
@@ -17,6 +22,8 @@ interface EducationItem {
 }
 
 export default function Education() {
+  const router = useRouter();
+
   // Group by institution
   const groupedByInstitution: { [key: string]: EducationItem[] } = educationData.reduce(
     (acc: { [key: string]: EducationItem[] }, edu: EducationItem) => {
@@ -55,11 +62,13 @@ export default function Education() {
               {/* Education Certifications */}
               <div className="grid grid-cols-1 gap-3 justify-items-center w-full max-w-xs">
                 {certs.map((cert) => (
-                  <Link key={cert.cert} href={`/education/${cert.cert}`} className="w-full">
-                    <span className="block w-full text-center px-4 py-2 rounded-full border border-gray-300 cursor-pointer hover:bg-gray-100 text-lg">
-                      {cert.name}
-                    </span>
-                  </Link>
+                  <Button
+                    key={cert.cert}
+                    className={"w-full"}
+                    onClick={() => router.push(`/education/${cert.cert}`)}
+                  >
+                    {cert.name}
+                  </Button>
                 ))}
               </div>
             </Card>

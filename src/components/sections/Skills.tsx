@@ -1,5 +1,6 @@
 import Card from "../ui/Card";
 import Divider from "../ui/Divider";
+
 import skillsData from "../../data/skills.json";
 
 export default function Skills() {

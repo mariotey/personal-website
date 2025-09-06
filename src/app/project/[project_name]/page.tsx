@@ -1,5 +1,6 @@
 "use client";
 
+import Button from "../../../components/ui/Button";
 import React from "react";
 import { useRouter } from "next/navigation";
 import projectData from "../../../data/projects.json";
@@ -37,14 +38,13 @@ export default function ProjectDetail({ params }: Props) {
     <div className="bg-gray-200 min-h-screen py-12 px-4">
       <div className="max-w-4xl mx-auto bg-white shadow-xl rounded-2xl p-8 sm:p-12">
         {/* Back button */}
-        <button
+        <Button
           onClick={() =>
             window.history.length > 1 ? router.back() : router.push("/")
           }
-          className="cursor-pointer text-blue-600 hover:text-blue-700 font-medium flex items-center gap-1 mb-6"
         >
           ← Back
-        </button>
+        </Button>
 
         {/* Header */}
         <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-2">
@@ -53,7 +53,7 @@ export default function ProjectDetail({ params }: Props) {
         <p className="text-lg text-gray-700 mb-6">{proj.short_description}</p>
 
         {/* Media Gallery */}
-        {proj.media?.length && (
+        {proj.media && proj.media.length > 0 && (
           <div className="mb-8 relative">
             <div className="w-full h-64 sm:h-96 bg-gray-100 rounded-lg overflow-hidden flex items-center justify-center">
               {proj.media[currentIndex].includes("drive.google.com") ? (
@@ -112,14 +112,12 @@ export default function ProjectDetail({ params }: Props) {
 
         {/* GitHub Link */}
         {proj.github_link !== "" && (
-          <a
-            href={proj.github_link}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-blue-600 hover:text-blue-700 underline"
+          <Button
+            className="text-gray-600"
+            onClick={() => router.push(proj.github_link)}
           >
             GitHub Repository
-          </a>
+          </Button>
         )}
       </div>
     </div>

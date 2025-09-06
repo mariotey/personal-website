@@ -1,5 +1,7 @@
 import Image from "next/image";
+
 import Divider from "../ui/Divider";
+
 import heroData from "../../data/hero.json";
 
 export default function Hero() {

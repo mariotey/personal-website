@@ -1,5 +1,6 @@
 import Card from "../ui/Card";
 import Divider from "../ui/Divider";
+
 import workExperienceData from "../../data/workExperience.json";
 
 export default function WorkExperience() {

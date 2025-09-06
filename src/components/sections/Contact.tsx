@@ -1,9 +1,11 @@
 "use client";
 
 import { useState } from "react";
-import Divider from "../ui/Divider";
-import contactData from "../../data/contact.json";
 import { ClipboardIcon } from "@heroicons/react/24/solid";
+
+import Divider from "../ui/Divider";
+
+import contactData from "../../data/contact.json";
 
 export default function Contact() {
     const [toastMessage, setToastMessage] = useState("");

@@ -2,8 +2,11 @@
 
 import React from "react";
 import Link from "next/link";
+
 import Card from "../ui/Card";
+import Button from "../ui/Button";
 import Divider from "../ui/Divider";
+
 import projectsData from "../../data/projects.json";
 
 export default function Projects() {
@@ -49,12 +52,9 @@ export default function Projects() {
         </div>
 
         {projectsData.length > 3 && (
-          <button
-            onClick={() => setShowAll(!showAll)}
-            className="cursor-pointer mt-6 text-blue-600 hover:text-blue-700 underline font-medium"
-          >
-            {showAll ? "Collapse Projects" : "See All Projects"}
-          </button>
+          <Button onClick={() => setShowAll(!showAll)}>
+            {showAll ? "Collapse" : "See More..."}
+          </Button>
         )}
       </section>
 
