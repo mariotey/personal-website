@@ -20,7 +20,7 @@ export default function Contact() {
     return (
         <>
             <Section title="Contact Details">
-                <div className="space-y-6">
+                <div>
                     {contactData.map((contactInfo) => {
                     const iconSrc = contactInfo.icon || null;
 

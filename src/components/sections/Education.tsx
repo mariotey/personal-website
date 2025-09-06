@@ -58,7 +58,7 @@ export default function Education() {
               )}
 
               {/* Education Certifications */}
-              <div className="grid grid-cols-1 gap-3 justify-items-center w-full max-w-xs">
+              <div className="grid grid-cols-1 justify-items-center w-full max-w-xs">
                 {certs.map((cert) => (
                   <Button
                     key={cert.cert}
