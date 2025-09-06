@@ -34,7 +34,7 @@ export default function Projects() {
     }, 7000);
 
     return () => clearInterval(interval);
-  }, [currentPage, isHovering, isInteracting, totalPages]);
+  }, [isHovering, isInteracting, totalPages]);
 
   if (!mounted) return null;
 
@@ -58,6 +58,7 @@ export default function Projects() {
   };
 
   const handleTouchEnd = (e: React.TouchEvent) => {
+    setTouchEndX(e.changedTouches[0].clientX);
     const dx = touchStartX - touchEndX;
     const dy = touchStartY - e.changedTouches[0].clientY; // vertical movement
     const threshold = 50;
@@ -111,21 +112,23 @@ export default function Projects() {
                         key={project.name}
                         href={`/project/${project.project_name}`}
                       >
-                        <Card className="text-left hover:bg-gray-100 transition-shadow cursor-pointer h-72 flex flex-col">
-                          <div className="w-full h-40 mb-4 bg-gray-200 rounded overflow-hidden flex items-center justify-center">
-                            <img
-                              src={project.thumbnail_url || "/images/NoImageIcon.png"}
-                              alt={`${project.name} thumbnail`}
-                              className="w-full h-full object-contain"
-                              onError={(e) => {
-                                (e.currentTarget as HTMLImageElement).src =
-                                  "/images/NoImageIcon.png";
-                              }}
-                            />
+                        <Card className="text-left border-gray-300 hover:bg-gray-100 transition-shadow hover:shadow-lg cursor-pointer h-72 flex flex-col">
+                          <div className="group flex flex-col h-full">
+                            <div className="w-full h-40 mb-4 bg-gray-200 rounded overflow-hidden flex items-center justify-center">
+                              <img
+                                src={project.thumbnail_url || "/images/NoImageIcon.png"}
+                                alt={`${project.name} thumbnail`}
+                                className="w-full h-full object-contain"
+                                onError={(e) => {
+                                  (e.currentTarget as HTMLImageElement).src =
+                                    "/images/NoImageIcon.png";
+                                }}
+                              />
+                            </div>
+                            <h4 className="text-l font-semibold mb-2 text-gray-900 text-center line-clamp-2 group-hover:text-blue-700">
+                              {project.name}
+                            </h4>
                           </div>
-                          <h4 className="text-l font-semibold mb-2 text-gray-900 text-center line-clamp-2">
-                            {project.name}
-                          </h4>
                         </Card>
                       </Link>
                     ))}
