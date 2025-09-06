@@ -25,14 +25,14 @@ export default function Projects() {
 
   // Reset interval whenever currentPage changes or hover state changes
   useEffect(() => {
-    if (isHovering) return; // don't auto-swipe when hovering
+    if (isHovering) return; // skip if hovering
 
     const interval = setInterval(() => {
       setCurrentPage((prev) => (prev + 1) % totalPages);
     }, 7000);
 
-    return () => clearInterval(interval); // cleanup and reset interval
-  }, [currentPage, isHovering, totalPages]);
+    return () => clearInterval(interval);
+  }, [currentPage, isHovering, totalPages]); // all stable values
 
   if (!mounted) return null;
 
