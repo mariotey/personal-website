@@ -2,6 +2,9 @@
 
 import React from "react";
 import { useRouter } from "next/navigation";
+
+import Button from "../../../components/ui/Button";
+
 import educationData from "../../../data/education.json";
 
 interface EducationItem {
@@ -39,14 +42,13 @@ export default function EducationDetail({ params }: Props) {
     <div className="bg-gray-100 min-h-screen py-12 px-4">
       <div className="max-w-4xl mx-auto bg-white shadow-xl rounded-2xl p-8 sm:p-12">
         {/* Back button */}
-        <button
+        <Button
           onClick={() =>
             window.history.length > 1 ? router.back() : router.push("/")
           }
-          className="cursor-pointer text-blue-600 hover:text-blue-700 font-medium flex items-center gap-1 mb-6"
         >
           ← Back
-        </button>
+        </Button>
 
         {/* Header */}
         <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-1">

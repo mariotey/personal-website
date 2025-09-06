@@ -1,8 +1,10 @@
 "use client";
 
-import Button from "../../../components/ui/Button";
 import React from "react";
 import { useRouter } from "next/navigation";
+
+import Button from "../../../components/ui/Button";
+
 import projectData from "../../../data/projects.json";
 
 interface ProjectItem {
