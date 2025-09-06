@@ -1,4 +1,5 @@
-import Hero from "../components/sections/Hero";
+import Hero from "../components/main/Hero";
+
 import Education from "../components/sections/Education";
 import WorkExperience from "../components/sections/WorkExperience";
 import Project from "../components/sections/Projects";

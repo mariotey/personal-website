@@ -1,3 +1,4 @@
+import Section from "../ui/Section";
 import Card from "../ui/Card";
 import Divider from "../ui/Divider";
 
@@ -6,18 +7,12 @@ import workExperienceData from "../../data/workExperience.json";
 export default function WorkExperience() {
   return (
     <>
-        <section className="mt-12 sm:mt-20 mb-12 sm:mb-20 px-4 sm:px-0 max-w-4xl mx-auto">
-            <h3
-                className="text-xl sm:text-2xl font-semibold mb-6 text-center"
-                style={{ color: "#0f1f4f" }}
-            >
-                Work Experience
-            </h3>
+        <Section title="Work Experience">
             <div className="space-y-6">
                 {workExperienceData.map((exp) => (
                 <Card key={exp.role}>
                     <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center">
-                        <div>
+                        <div className="text-left">
                             {/* Role */}
                             <h4 className="text-lg sm:text-xl font-semibold text-gray-900">{exp.role}</h4>
                             {/* Company */}
@@ -35,7 +30,7 @@ export default function WorkExperience() {
                 </Card>
                 ))}
             </div>
-        </section>
+        </Section>
 
         {/* Divider */}
         <Divider/>

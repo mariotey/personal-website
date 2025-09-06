@@ -3,6 +3,7 @@
 import React from "react";
 import Link from "next/link";
 
+import Section from "../ui/Section";
 import Card from "../ui/Card";
 import Button from "../ui/Button";
 import Divider from "../ui/Divider";
@@ -27,11 +28,7 @@ export default function Projects() {
 
   return (
     <>
-      <section className="mt-20 mb-20 max-w-7xl mx-auto text-center">
-        <h3 className="text-2xl font-semibold mb-6" style={{ color: "#0f1f4f" }}>
-          Projects
-        </h3>
-
+      <Section title="Projects">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 text-gray-600">
           {projectsToRender.map((project) => (
             <Link
@@ -56,8 +53,9 @@ export default function Projects() {
             {showAll ? "Collapse" : "See More..."}
           </Button>
         )}
-      </section>
+      </Section>
 
+      {/* Divider */}
       <Divider />
     </>
   );

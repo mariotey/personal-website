@@ -2,6 +2,7 @@
 
 import { useRouter } from "next/navigation";
 
+import Section from "../ui/Section";
 import Card from "../ui/Card";
 import Button from "../ui/Button";
 import Divider from "../ui/Divider";
@@ -38,10 +39,7 @@ export default function Education() {
 
   return (
     <>
-      <section className="mt-20 mb-20 max-w-7xl mx-auto text-center">
-        <h3 className="text-2xl font-semibold mb-6" style={{ color: "#0f1f4f" }}>
-          Education
-        </h3>
+      <Section title="Education">
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 text-gray-600">
           {Object.entries(groupedByInstitution).map(([institution, certs]) => (
             <Card
@@ -74,7 +72,7 @@ export default function Education() {
             </Card>
           ))}
         </div>
-      </section>
+      </Section>
 
       {/* Divider */}
       <Divider />

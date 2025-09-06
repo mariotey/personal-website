@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { ClipboardIcon } from "@heroicons/react/24/solid";
 
+import Section from "../ui/Section";
 import Divider from "../ui/Divider";
 
 import contactData from "../../data/contact.json";
@@ -18,46 +19,40 @@ export default function Contact() {
 
     return (
         <>
-            <section className="mt-20 mb-20 max-w-4xl mx-auto">
-            <h3
-                className="text-2xl font-semibold mb-6 text-center"
-                style={{ color: "#0f1f4f" }}
-            >
-                Contact Details
-            </h3>
+            <Section title="Contact Details">
+                <div className="space-y-6">
+                    {contactData.map((contactInfo) => {
+                    const iconSrc = contactInfo.icon || null;
 
-            <div className="space-y-6">
-                {contactData.map((contactInfo) => {
-                const iconSrc = contactInfo.icon || null;
+                    return (
+                        <div
+                            key={contactInfo.type}
+                            className="flex items-center justify-center space-x-3 text-gray-700 cursor-pointer hover:bg-gray-100 p-2 rounded group"
+                            onClick={() => handleCopy(contactInfo.contact, contactInfo.type)}
+                        >
+                            {/* Icon */}
+                            {iconSrc ? (
+                                <img
+                                src={iconSrc}
+                                alt={contactInfo.type}
+                                className="w-6 h-6 object-contain"
+                                />
+                            ) : (
+                                <div className="w-6 h-6" />
+                            )}
 
-                return (
-                    <div
-                    key={contactInfo.type}
-                    className="flex items-center space-x-3 text-gray-700 cursor-pointer hover:bg-gray-100 p-2 rounded group"
-                    onClick={() => handleCopy(contactInfo.contact, contactInfo.type)}
-                    >
-                    {/* Icon */}
-                    {iconSrc ? (
-                        <img
-                        src={iconSrc}
-                        alt={contactInfo.type}
-                        className="w-6 h-6 object-contain"
-                        />
-                    ) : (
-                        <div className="w-6 h-6" />
-                    )}
+                            {/* Contact text */}
+                            <span>{contactInfo.contact}</span>
 
-                    {/* Contact text */}
-                    <span>{contactInfo.contact}</span>
+                            {/* Copy icon */}
+                            <ClipboardIcon className="w-5 h-5 text-gray-400 group-hover:text-gray-600" />
+                        </div>
+                    );
+                    })}
+                </div>
+            </Section>
 
-                    {/* Copy icon */}
-                    <ClipboardIcon className="w-5 h-5 text-gray-400 group-hover:text-gray-600" />
-                    </div>
-                );
-                })}
-            </div>
-            </section>
-
+            {/* Divider */}
             <Divider />
 
             {/* Toast Notification */}
