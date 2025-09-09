@@ -125,14 +125,15 @@ export default function Projects() {
                       >
                         <Card className="text-left border-gray-300 hover:bg-gray-100 transition-shadow hover:shadow-lg cursor-pointer h-72 flex flex-col">
                           <div className="group flex flex-col h-full">
-                            <div className="w-full h-40 mb-4 bg-gray-200 rounded overflow-hidden flex items-center justify-center">
-                              <img
+                            <div className="w-full h-40 mb-4 bg-gray-200 rounded overflow-hidden flex items-center justify-center relative">
+                              <Image
                                 src={project.thumbnail_url || "/images/NoImageIcon.png"}
                                 alt={`${project.name} thumbnail`}
-                                className="w-full h-full object-contain"
+                                fill
+                                className="object-contain"
                                 onError={(e) => {
-                                  (e.currentTarget as HTMLImageElement).src =
-                                    "/images/NoImageIcon.png";
+                                  // fallback to default image
+                                  (e.target as HTMLImageElement).src = "/images/NoImageIcon.png";
                                 }}
                               />
                             </div>

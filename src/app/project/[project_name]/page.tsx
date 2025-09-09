@@ -105,11 +105,14 @@ export default function ProjectDetail({ params }: Props) {
               className="w-22.5 h-12.5 p-0 flex items-center justify-center rounded-full"
               onClick={() => router.push(item.src)}
             >
-              <img
-                src={item.icon || "/images/NoImageIcon.png"}
-                alt="icon"
-                className="h-full w-auto object-contain"
-              />
+              <div className="relative w-6 h-6"> {/* adjust size as needed */}
+                <Image
+                  src={item.icon || "/images/NoImageIcon.png"}
+                  alt="icon"
+                  fill
+                  className="object-contain"
+                />
+              </div>
             </Button>
           ))}
         </div>

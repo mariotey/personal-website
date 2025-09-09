@@ -17,9 +17,9 @@ function darkenColor(hex: string, amount: number = 20) {
   let col = hex.replace("#", "");
   if (col.length === 3) col = col.split("").map((c) => c + c).join("");
   const num = parseInt(col, 16);
-  let r = Math.max(0, ((num >> 16) & 0xff) - amount);
-  let g = Math.max(0, ((num >> 8) & 0xff) - amount);
-  let b = Math.max(0, (num & 0xff) - amount);
+  const r = Math.max(0, ((num >> 16) & 0xff) - amount);
+  const g = Math.max(0, ((num >> 8) & 0xff) - amount);
+  const b = Math.max(0, (num & 0xff) - amount);
   return `rgb(${r},${g},${b})`;
 }
 
