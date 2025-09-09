@@ -9,7 +9,6 @@ export interface Skill {
 
 interface SkillPillProps {
   skillJson: Skill;       // single skill object
-  width?: string;         // optional fixed width
   className?: string;     // optional additional classes
 }
 
