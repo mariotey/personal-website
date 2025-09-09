@@ -38,27 +38,26 @@ export default function Hero() {
       <main className="flex flex-col items-center min-h-screen text-center p-10">
         {/* Top Section */}
         <div className="flex flex-col items-center">
-          {/* Profile Image */}
-          <div className="relative w-[150px] h-[150px]">
+            {/* Profile Image */}
             <Image
-              src={heroData.profile_pic}
-              alt={`${heroData.firstName} ${heroData.lastName}`}
-              fill
-              className="rounded-full object-cover shadow-lg"
+                src={heroData.profile_pic}
+                alt={`${heroData.firstName} ${heroData.lastName}`}
+                width={150}
+                height={150}
+                className="rounded-full shadow-lg"
             />
-          </div>
 
-          {/* Name */}
-          <h1 className="text-4xl font-bold mt-6" style={{ color: "#0f1f4f" }}>
-            {heroData.lastName}
-            <span className="underline">{heroData.firstName}</span>
-          </h1>
+            {/* Name */}
+            <h1 className="text-4xl font-bold mt-6" style={{ color: "#0f1f4f" }}>
+                {heroData.lastName}
+                <span className="underline">{heroData.firstName}</span>
+            </h1>
 
-          {/* Title */}
-          <h2 className="text-xl text-gray-600 mt-2">{heroData.title}</h2>
+            {/* Title */}
+            <h2 className="text-xl text-gray-600 mt-2">{heroData.title}</h2>
 
-          {/* Summary */}
-          <p className="mt-4 max-w-2xl text-gray-700">{heroData.description}</p>
+            {/* Summary */}
+            <p className="mt-4 max-w-2xl text-gray-700">{heroData.description}</p>
         </div>
 
         {/* Contact Row */}
@@ -69,32 +68,40 @@ export default function Hero() {
 
               return (
                 <motion.button
-                  key={contactInfo.type}
-                  onClick={() => handleClick(contactInfo)}
-                  className="flex flex-col items-center justify-center w-24 h-24 cursor-pointer"
-                  whileHover={{
-                    rotate: [0, -10, 10, -10, 0],
-                    transition: { duration: 0.5 },
-                  }}
+                    key={contactInfo.type}
+                    onClick={() => handleClick(contactInfo)}
+                    className="flex flex-col items-center justify-center w-40 h-40 cursor-pointer"
+                    whileHover="hover"
+                    initial="rest"
+                    variants={{
+                    rest: { rotate: 0 },
+                    hover: { rotate: [0, -10, 10, -10, 0] },
+                    }}
                 >
-                  {iconSrc ? (
-                    <div className="relative w-8 h-8">
-                      <Image
+                    {iconSrc ? (
+                    <div className="relative w-15 h-15">
+                        <Image
                         src={iconSrc}
                         alt={contactInfo.type}
                         fill
                         className="object-contain"
-                      />
+                        />
                     </div>
-                  ) : (
+                    ) : (
                     <motion.div className="w-6 h-6 text-gray-400">
-                      <ClipboardIcon />
+                        <ClipboardIcon />
                     </motion.div>
-                  )}
+                    )}
 
-                  <span className="text-xs text-gray-500 mt-1">
-                    {contactInfo.type}
-                  </span>
+                    <motion.span
+                        className="text-xs mt-1"
+                        variants={{
+                            rest: { color: "#6b7280" },   // gray-500
+                            hover: { color: "#1d4ed8", fontWeight: 700},  // blue-700
+                        }}
+                    >
+                        {contactInfo.type}
+                    </motion.span>
                 </motion.button>
               );
             })}
