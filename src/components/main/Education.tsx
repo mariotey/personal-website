@@ -1,6 +1,7 @@
 "use client";
 
 import { useRouter } from "next/navigation";
+import Image from "next/image";
 
 import Section from "../ui/Section";
 import Card from "../ui/Card";
@@ -48,11 +49,12 @@ export default function Education() {
             >
               {/* Institution Image */}
               {certs[0].instituition_image && (
-                <div className="w-30 h-30 bg-white rounded-full flex items-center justify-center overflow-hidden shadow-sm">
-                  <img
+                <div className="w-30 h-30 bg-white rounded-full flex items-center justify-center overflow-hidden shadow-sm relative">
+                  <Image
                     src={certs[0].instituition_image}
                     alt={`${institution} logo`}
-                    className="max-w-full max-h-full"
+                    fill
+                    className="object-contain"
                   />
                 </div>
               )}

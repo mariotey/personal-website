@@ -1,7 +1,6 @@
 "use client";
 
 import React from "react";
-import { useRouter } from "next/navigation";
 import Image from "next/image";
 
 import PageCard from "../../../components/ui/PageCard";
@@ -27,7 +26,6 @@ interface Props {
 
 export default function EducationDetail({ params }: Props) {
   const { cert } = React.use(params);
-  const router = useRouter();
 
   const typedEducationData = educationData as EducationItem[];
   const edu = typedEducationData.find((item) => item.cert === cert);

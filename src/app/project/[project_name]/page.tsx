@@ -2,6 +2,7 @@
 
 import React from "react";
 import { useRouter } from "next/navigation";
+import Image from "next/image";
 
 import Button from "../../../components/ui/Button";
 import PageCard from "../../../components/ui/PageCard";
@@ -55,11 +56,15 @@ export default function ProjectDetail({ params }: Props) {
                 title={`Media ${currentIndex + 1}`}
               />
             ) : (
-              <img
-                src={proj.media[currentIndex]}
-                alt={`Media ${currentIndex + 1}`}
-                className="w-full h-full object-cover"
-              />
+              <div className="relative w-full h-full">
+                <Image
+                  src={proj.media[currentIndex]}
+                  alt={`Media ${currentIndex + 1}`}
+                  fill
+                  className="object-cover rounded-lg"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                />
+              </div>
             )}
           </div>
 

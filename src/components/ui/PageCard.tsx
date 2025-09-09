@@ -12,7 +12,7 @@ export default function PageCard({ children, className = "" }: CardProps) {
     const router = useRouter();
 
     return (
-        <div className="bg-gray-100 min-h-screen py-12 px-4">
+        <div className={`bg-gray-100 min-h-screen py-12 px-4 ${className}`}>
             <div className="max-w-4xl mx-auto">
                 {/* Back button */}
                 <div className="mb-6">
