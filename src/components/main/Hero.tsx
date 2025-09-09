@@ -49,7 +49,7 @@ export default function Hero() {
 
             {/* Name */}
             <h1 className="text-4xl font-bold mt-6" style={{ color: "#0f1f4f" }}>
-                {heroData.lastName}
+                {heroData.lastName} &nbsp;
                 <span className="underline">{heroData.firstName}</span>
             </h1>
 
