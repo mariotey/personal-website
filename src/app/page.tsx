@@ -3,7 +3,6 @@ import Education from "../components/main/Education";
 import WorkExperience from "../components/main/WorkExperience";
 import Project from "../components/main/Projects";
 import Skills from "../components/main/Skills";
-import Contact from "../components/main/Contact";
 
 import Footer from "../components/ui/Footer";
 
@@ -28,8 +27,6 @@ export default function Home() {
           {/* Skills Section */}
           <Skills/>
 
-          {/* Contact Section */}
-          <Contact/>
         </div>
 
         <div>
