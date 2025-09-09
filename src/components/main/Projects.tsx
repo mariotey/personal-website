@@ -8,7 +8,7 @@ import Section from "../ui/Section";
 import Card from "../ui/Card";
 import Divider from "../ui/Divider";
 
-import projectsData from "../../data/projects.json";
+import projectsData from "../../data/projects";
 
 export default function Projects() {
   const [mounted, setMounted] = useState(false);

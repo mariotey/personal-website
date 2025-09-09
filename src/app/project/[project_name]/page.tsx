@@ -7,15 +7,17 @@ import Image from "next/image";
 import Button from "../../../components/ui/Button";
 import PageCard from "../../../components/ui/PageCard";
 
-import projectData from "../../../data/projects.json";
+import projectData from "../../../data/projects";
 
 interface ProjectItem {
   name: string;
   project_name: string;
+  thumbnail_url: string;
   short_description: string;
   long_description: string[];
   media?: string[];
   link?: { src: string; icon?: string; link_type?: string; }[];
+  skills?: string[];
 }
 
 interface Props {

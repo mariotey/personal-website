@@ -68,40 +68,40 @@ export default function Hero() {
 
               return (
                 <motion.button
-                    key={contactInfo.type}
-                    onClick={() => handleClick(contactInfo)}
-                    className="flex flex-col items-center justify-center w-40 h-40 cursor-pointer"
-                    whileHover="hover"
-                    initial="rest"
-                    variants={{
+                  key={contactInfo.type}
+                  onClick={() => handleClick(contactInfo)}
+                  className="flex flex-col items-center justify-center w-32 sm:w-40 h-32 sm:h-40 cursor-pointer"
+                  whileHover="hover"
+                  initial="rest"
+                  variants={{
                     rest: { rotate: 0 },
                     hover: { rotate: [0, -10, 10, -10, 0] },
-                    }}
+                  }}
                 >
-                    {iconSrc ? (
-                    <div className="relative w-15 h-15">
-                        <Image
+                  {iconSrc ? (
+                    <div className="relative w-10 h-10 sm:w-15 sm:h-15">
+                      <Image
                         src={iconSrc}
                         alt={contactInfo.type}
                         fill
                         className="object-contain"
-                        />
+                      />
                     </div>
-                    ) : (
+                  ) : (
                     <motion.div className="w-6 h-6 text-gray-400">
-                        <ClipboardIcon />
+                      <ClipboardIcon />
                     </motion.div>
-                    )}
+                  )}
 
-                    <motion.span
-                        className="text-xs mt-1"
-                        variants={{
-                            rest: { color: "#6b7280" },   // gray-500
-                            hover: { color: "#1d4ed8", fontWeight: 700},  // blue-700
-                        }}
-                    >
-                        {contactInfo.type}
-                    </motion.span>
+                  <motion.span
+                    className="text-xs mt-1"
+                    variants={{
+                      rest: { color: "#6b7280" },   // gray-500
+                      hover: { color: "#1d4ed8", fontWeight: 700 },  // blue-700
+                    }}
+                  >
+                    {contactInfo.type}
+                  </motion.span>
                 </motion.button>
               );
             })}

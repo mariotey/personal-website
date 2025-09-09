@@ -1,4 +1,4 @@
-[
+const projectData = [
     {
         "name": "Image-based Movie Recommender",
         "project_name": "Recommender",
@@ -16,7 +16,8 @@
                 "icon": "/images/githubIcon.gif",
                 "link_type": "github"
             }
-        ]
+        ],
+        "skills":[]
     },
     {
         "name": "Volunteering App - Connect4Good",
@@ -38,7 +39,8 @@
                 "icon": "/images/devpostIcon.png",
                 "link_type": "devpost"
             }
-        ]
+        ],
+        "skills":[]
     },
     {
         "name": "Cloud Data Analytics Tool - Reko",
@@ -59,7 +61,8 @@
                 "icon": "/images/githubIcon.gif",
                 "link_type": "github"
             }
-        ]
+        ],
+        "skills":[]
     },
     {
         "name": "Robotic Walking Buddy for Prehabilitation",
@@ -83,7 +86,8 @@
                 "icon": "/images/githubIcon.gif",
                 "link_type": "github"
             }
-        ]
+        ],
+        "skills":[]
     },
     {
         "name": "Soft Tactile Sensors for Computer Gaming",
@@ -108,7 +112,8 @@
                 "icon": "/images/githubIcon.gif",
                 "link_type": "github"
             }
-        ]
+        ],
+        "skills":[]
     },
     {
         "name": "Assistive Tool for Nasogastric Intubation",
@@ -126,6 +131,9 @@
             "https://drive.google.com/file/d/1eeN0cY4oZeb3U-3p29KsZRNPWxBlkXA9/preview",
             "https://drive.google.com/file/d/1RTG9bsx28XAWoLgX70YIc3uQeOnv6WZh/preview"
         ],
-        "link": []
+        "link": [],
+        "skills":[]
     }
 ]
+
+export default projectData;
