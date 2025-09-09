@@ -23,16 +23,13 @@ function darkenColor(hex: string, amount: number = 20) {
   return `rgb(${r},${g},${b})`;
 }
 
-export default function SkillPill({ skillJson, width = "w-32", className = "" }: SkillPillProps) {
+export default function SkillPill({ skillJson, className = "" }: SkillPillProps) {
   const borderColor = darkenColor(skillJson.color, 30);
 
   return (
     <div
-      className={`${width} rounded-md text-white text-sm font-medium shadow-sm text-center m-1 ${className}`}
-      style={{
-        backgroundColor: skillJson.color,
-        border: `2px solid ${borderColor}`
-      }}
+      className={`rounded-md text-white text-sm font-medium shadow-sm text-center m-1 w-full ${className}`}
+      style={{ backgroundColor: skillJson.color, border: `2px solid ${borderColor}` }}
     >
       {skillJson.name}
     </div>

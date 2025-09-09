@@ -7,16 +7,16 @@ import skillsData from "../../data/skills";
 export default function Skills() {
   return (
     <>
-        <Section title="Skills & Tech Stack">
-          <div className="flex flex-wrap gap-2">
-            {skillsData.map((skill) => (
-              <SkillPill key={skill.name} skillJson={skill} />
-            ))}
-          </div>
-        </Section>
+      <Section title="Skills & Tech Stack">
+        <div className="grid grid-cols-3 gap-2 md:grid-cols-6">
+          {skillsData.map((skill) => (
+            <SkillPill key={skill.name} skillJson={skill} />
+          ))}
+        </div>
+      </Section>
 
-        {/* Divider */}
-        <Divider/>
+      {/* Divider */}
+      <Divider />
     </>
   );
 }
