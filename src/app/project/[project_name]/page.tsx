@@ -48,8 +48,23 @@ export default function ProjectDetail({ params }: Props) {
 
       {/* Media Gallery */}
       {proj.media && proj.media.length > 0 && (
-        <div className="mb-8 relative">
-          <div className="w-full h-64 sm:h-96 bg-gray-100 rounded-lg overflow-hidden flex items-center justify-center">
+        <div className="mb-8 flex items-center justify-between">
+          {/* Left button */}
+          {proj.media.length > 1 && (
+            <button
+              onClick={() =>
+                setCurrentIndex((prev) =>
+                  prev === 0 ? proj.media!.length - 1 : prev - 1
+                )
+              }
+              className="bg-gray-800 text-white p-2 rounded-full opacity-70 hover:opacity-100"
+            >
+              ◀
+            </button>
+          )}
+
+          {/* Media */}
+          <div className="w-full h-64 sm:h-96 bg-gray-100 rounded-lg overflow-hidden relative mx-2">
             {proj.media[currentIndex].includes("drive.google.com") ? (
               <iframe
                 src={proj.media[currentIndex]}
@@ -58,42 +73,28 @@ export default function ProjectDetail({ params }: Props) {
                 title={`Media ${currentIndex + 1}`}
               />
             ) : (
-              <div className="relative w-full h-full">
-                <Image
-                  src={proj.media[currentIndex]}
-                  alt={`Media ${currentIndex + 1}`}
-                  fill
-                  className="object-cover rounded-lg"
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                />
-              </div>
+              <Image
+                src={proj.media[currentIndex]}
+                alt={`Media ${currentIndex + 1}`}
+                fill
+                className="object-cover rounded-lg"
+                sizes="(max-width: 768px) 100vw, 50vw"
+              />
             )}
           </div>
 
-          {/* Navigation buttons */}
+          {/* Right button */}
           {proj.media.length > 1 && (
-            <>
-              <button
-                onClick={() =>
-                  setCurrentIndex((prev) =>
-                    prev === 0 ? proj.media!.length - 1 : prev - 1
-                  )
-                }
-                className="absolute top-1/2 left-2 -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full opacity-70 hover:opacity-100"
-              >
-                ◀
-              </button>
-              <button
-                onClick={() =>
-                  setCurrentIndex((prev) =>
-                    prev === proj.media!.length - 1 ? 0 : prev + 1
-                  )
-                }
-                className="absolute top-1/2 right-2 -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full opacity-70 hover:opacity-100"
-              >
-                ▶
-              </button>
-            </>
+            <button
+              onClick={() =>
+                setCurrentIndex((prev) =>
+                  prev === proj.media!.length - 1 ? 0 : prev + 1
+                )
+              }
+              className="bg-gray-800 text-white p-2 rounded-full opacity-70 hover:opacity-100"
+            >
+              ▶
+            </button>
           )}
         </div>
       )}
