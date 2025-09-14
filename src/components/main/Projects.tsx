@@ -69,17 +69,18 @@ export default function Projects() {
   };
 
   const handleTouchEnd = (e: React.TouchEvent) => {
-    setTouchEndX(e.changedTouches[0].clientX);
-    const dx = touchStartX - touchEndX;
-    const dy = touchStartY - e.changedTouches[0].clientY; // vertical movement
+    const dx = touchStartX - e.changedTouches[0].clientX;
+    const dy = touchStartY - e.changedTouches[0].clientY;
     const threshold = 50;
 
+    // Only swipe if horizontal movement exceeds threshold
     if (Math.abs(dx) > Math.abs(dy) && Math.abs(dx) > threshold) {
       if (dx > 0) nextPage();
       else prevPage();
+      setIsInteracting(true); // only block auto-swipe
+    } else {
+      setIsInteracting(false); // allow tap/click
     }
-
-    setIsInteracting(false); // resume auto-swipe
   };
 
   return (
@@ -161,6 +162,7 @@ export default function Projects() {
                 </button>
               )}
             </div>
+
           </div>
 
           {/* Page indicators */}
