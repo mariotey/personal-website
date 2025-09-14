@@ -14,11 +14,16 @@ export default function Projects() {
   const [mounted, setMounted] = useState(false);
   const [currentPage, setCurrentPage] = useState(0);
   const [isHovering, setIsHovering] = useState(false);
+  const [isTouchDevice, setIsTouchDevice] = useState(false);
   const [touchStartX, setTouchStartX] = useState(0);
   const [touchStartY, setTouchStartY] = useState(0);
   const [touchEndX, setTouchEndX] = useState(0);
   const [isInteracting, setIsInteracting] = useState(false);
   const [pageSize, setPageSize] = useState(3);
+
+  useEffect(() => {
+    setIsTouchDevice('ontouchstart' in window || navigator.maxTouchPoints > 0);
+  }, []);
 
   // Adjust page size based on screen width
   useEffect(() => {
@@ -94,14 +99,16 @@ export default function Projects() {
 
             {/* Left button */}
             <div className="w-12 flex-shrink-0 flex justify-center">
-              {isHovering && (
-                <button
-                  onClick={prevPage}
-                  className="bg-gray-800 text-white rounded-full p-2 opacity-75 hover:opacity-100 transition z-20"
-                >
-                  ◀
-                </button>
-              )}
+              {
+                (!isTouchDevice && isHovering) || isTouchDevice ? (
+                  <button
+                    onClick={prevPage}
+                    className="bg-gray-800 text-white rounded-full p-2 opacity-75 hover:opacity-100 transition z-20"
+                  >
+                    ◀
+                  </button>
+                ): null
+              }
             </div>
 
             {/* Carousel */}
@@ -153,14 +160,16 @@ export default function Projects() {
 
             {/* Right button */}
             <div className="w-12 flex-shrink-0 flex justify-center">
-              {isHovering && (
-                <button
-                  onClick={nextPage}
-                  className="bg-gray-800 text-white rounded-full p-2 opacity-75 hover:opacity-100 transition z-20"
-                >
-                  ▶
-                </button>
-              )}
+              {
+                (!isTouchDevice && isHovering) || isTouchDevice ? (
+                  <button
+                    onClick={nextPage}
+                    className="bg-gray-800 text-white rounded-full p-2 opacity-75 hover:opacity-100 transition z-20"
+                  >
+                    ▶
+                  </button>
+                ): null
+              }
             </div>
 
           </div>
