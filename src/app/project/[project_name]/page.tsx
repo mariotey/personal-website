@@ -15,7 +15,7 @@ interface ProjectItem {
   thumbnail_url: string;
   short_description: string;
   long_description: string[];
-  media?: string[];
+  media?: { src: string; caption?: string }[];
   link?: { src: string; icon?: string; link_type?: string; }[];
   skills?: string[];
 }
@@ -48,54 +48,68 @@ export default function ProjectDetail({ params }: Props) {
 
       {/* Media Gallery */}
       {proj.media && proj.media.length > 0 && (
-        <div className="mb-8 flex items-center justify-between">
-          {/* Left button */}
-          {proj.media.length > 1 && (
-            <button
-              onClick={() =>
-                setCurrentIndex((prev) =>
-                  prev === 0 ? proj.media!.length - 1 : prev - 1
-                )
-              }
-              className="bg-gray-800 text-white p-2 rounded-full opacity-70 hover:opacity-100"
-            >
-              ◀
-            </button>
-          )}
+        <div className="mb-8">
 
-          {/* Media */}
-          <div className="w-full h-64 sm:h-96 bg-gray-100 rounded-lg overflow-hidden relative mx-2">
-            {proj.media[currentIndex].includes("drive.google.com") ? (
-              <iframe
-                src={proj.media[currentIndex]}
-                className="w-full h-full object-cover"
-                allow="autoplay"
-                title={`Media ${currentIndex + 1}`}
-              />
-            ) : (
-              <Image
-                src={proj.media[currentIndex]}
-                alt={`Media ${currentIndex + 1}`}
-                fill
-                className="object-cover rounded-lg"
-                sizes="(max-width: 768px) 100vw, 50vw"
-              />
+          {/* Media + Controls */}
+          <div className="flex items-center justify-between">
+
+            {/* Left button */}
+            {proj.media.length > 1 && (
+              <button
+                onClick={() =>
+                  setCurrentIndex((prev) =>
+                    prev === 0 ? proj.media!.length - 1 : prev - 1
+                  )
+                }
+                className="bg-gray-800 text-white p-2 rounded-full opacity-70 hover:opacity-100"
+              >
+                ◀
+              </button>
             )}
+
+            {/* Media */}
+            <div className="w-full h-64 sm:h-96 bg-gray-100 rounded-lg overflow-hidden relative mx-2">
+              {proj.media[currentIndex].src.includes("drive.google.com") ? (
+                <iframe
+                  src={proj.media[currentIndex].src}
+                  className="w-full h-full object-cover"
+                  allow="autoplay"
+                  title={`Media ${currentIndex + 1}`}
+                />
+              ) : (
+                <Image
+                  src={proj.media[currentIndex].src}
+                  alt={`Media ${currentIndex + 1}`}
+                  fill
+                  className="object-cover rounded-lg"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                />
+              )}
+            </div>
+
+            {/* Right button */}
+            {proj.media.length > 1 && (
+              <button
+                onClick={() =>
+                  setCurrentIndex((prev) =>
+                    prev === proj.media!.length - 1 ? 0 : prev + 1
+                  )
+                }
+                className="bg-gray-800 text-white p-2 rounded-full opacity-70 hover:opacity-100"
+              >
+                ▶
+              </button>
+            )}
+
           </div>
 
-          {/* Right button */}
-          {proj.media.length > 1 && (
-            <button
-              onClick={() =>
-                setCurrentIndex((prev) =>
-                  prev === proj.media!.length - 1 ? 0 : prev + 1
-                )
-              }
-              className="bg-gray-800 text-white p-2 rounded-full opacity-70 hover:opacity-100"
-            >
-              ▶
-            </button>
-          )}
+          {/* Caption (centered under media) */}
+          <div className="mt-3 mx-auto max-w-[600px]">
+            <p className="text-gray-600 text-sm text-center italic min-h-[2.5rem]">
+              {proj.media[currentIndex].caption || ""}
+            </p>
+          </div>
+
         </div>
       )}
 

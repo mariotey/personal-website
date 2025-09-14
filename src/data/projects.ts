@@ -51,9 +51,18 @@ const projectData = [
         ],
         "thumbnail_url":"/images/projectThumbnail/rekoIcon.png",
         "media": [
-            "https://drive.google.com/file/d/1OqkFiOGmbmiFrWn3mwCoS6QEpPv1yESn/preview",
-            "https://drive.google.com/file/d/1Zek5xoW24tFCaXsBX3besUgwbhmVl08z/preview",
-            "https://drive.google.com/file/d/1d7eEGhbnq4xbNmB4rWVUVmpeblvBTjOP/preview"
+            {
+                "src": "https://drive.google.com/file/d/1OqkFiOGmbmiFrWn3mwCoS6QEpPv1yESn/preview",
+                "caption": "User Flow Diagram"
+            },
+            {
+                "src": "https://drive.google.com/file/d/1Zek5xoW24tFCaXsBX3besUgwbhmVl08z/preview",
+                "caption": "Cloud Architecture Overview"
+            },
+            {
+                "src": "https://drive.google.com/file/d/1d7eEGhbnq4xbNmB4rWVUVmpeblvBTjOP/preview",
+                "caption": "Demo Video"
+            }
         ],
         "link": [
             {
@@ -75,10 +84,22 @@ const projectData = [
         ],
         "thumbnail_url":"/images/projectThumbnail/Walk-E.png",
         "media": [
-            "https://drive.google.com/file/d/1CXyJDNLBxuBRwnjO2Za4oevwNZYxqkP4/preview",
-            "https://drive.google.com/file/d/1741cqLF_BZWLqHXHxJm2MgrhRk_Tm4eP/preview",
-            "https://drive.google.com/file/d/155z9wywgoDe4J5Q6VC_u5zKdOKNPPhO1/preview",
-            "https://drive.google.com/file/d/1sxB-JwM0gaOtGODT_nzD-NeHV4ka4BdM/preview"
+            {
+                "src": "https://drive.google.com/file/d/1CXyJDNLBxuBRwnjO2Za4oevwNZYxqkP4/preview",
+                "caption": "Robotic Walking Buddy (Walk-E)"
+            },
+            {
+                "src": "https://drive.google.com/file/d/1741cqLF_BZWLqHXHxJm2MgrhRk_Tm4eP/preview",
+                "caption": "The user interface displays body mappings of the patient using MediaPipe Pose, highlighting key joints and movement patterns"
+            },
+            {
+                "src": "https://drive.google.com/file/d/155z9wywgoDe4J5Q6VC_u5zKdOKNPPhO1/preview",
+                "caption": "The data analytics interface visualizes how individual gait cycles of the patient have been captured and analyzed"
+            },
+            {
+                "src": "https://drive.google.com/file/d/1sxB-JwM0gaOtGODT_nzD-NeHV4ka4BdM/preview",
+                "caption": "The data analytics interface presents the average waveforms of hip, knee, and ankle flexion across all walking gait cycles"
+            }
         ],
         "link": [
             {
@@ -100,11 +121,26 @@ const projectData = [
         ],
         "thumbnail_url":"/images/projectThumbnail/sleeve-button.jpg",
         "media":[
-            "https://drive.google.com/file/d/1CP8H_OOJTgmuLqApCaBle9Xz3GocQ9ed/preview",
-            "https://drive.google.com/file/d/100wglsYZMNnB1RHcXlk9y5tr5nQDqsc6/preview",
-            "https://drive.google.com/file/d/1jutUX28qBUvQiqrofMNvhlVeR5X6Fzl5/preview",
-            "https://drive.google.com/file/d/1Z9KqAA0TGZmETsB0DjC9LzJIO_TDxuKN/preview",
-            "https://drive.google.com/file/d/1vN7mJ6amsZL-UN4QXJy42SaKShy0SCHg/preview"
+            {
+                "src": "https://drive.google.com/file/d/1CP8H_OOJTgmuLqApCaBle9Xz3GocQ9ed/preview",
+                "caption": "Soft Tactile Sensors for Computer Gaming (texSleeve)"
+            },
+            {
+                "src": "https://drive.google.com/file/d/100wglsYZMNnB1RHcXlk9y5tr5nQDqsc6/preview",
+                "caption": "texSleeve worn on arm, equipped with capacitive sensors that are responsive and comfortable to wear"
+            },
+            {
+                "src": "https://drive.google.com/file/d/1jutUX28qBUvQiqrofMNvhlVeR5X6Fzl5/preview",
+                "caption": "Demonstration of unworn texSleeve (Game: Burnout Extreme Drift 3)"
+            },
+            {
+                "src": "https://drive.google.com/file/d/1Z9KqAA0TGZmETsB0DjC9LzJIO_TDxuKN/preview",
+                "caption": "Demonstration of worn texSleeve (Game: Batman Arkham City)"
+            },
+            {
+                "src": "https://drive.google.com/file/d/1vN7mJ6amsZL-UN4QXJy42SaKShy0SCHg/preview",
+                "caption": " Demonstration of texSleeve with other Input Devices (Game: Transformers War for Cybertron)"
+            }
         ],
         "link": [
             {
@@ -126,10 +162,22 @@ const projectData = [
         ],
         "thumbnail_url":"/images/projectThumbnail/nasogastricintubation.jpg",
         "media":[
-            "https://drive.google.com/file/d/1NtFdr7GFX_CmBwukJX8TJAuOQ10JHSTz/preview",
-            "https://drive.google.com/file/d/1FyGzgwlAHE2EUN3uJxcyn-ePOJp7zw6Z/preview",
-            "https://drive.google.com/file/d/1eeN0cY4oZeb3U-3p29KsZRNPWxBlkXA9/preview",
-            "https://drive.google.com/file/d/1RTG9bsx28XAWoLgX70YIc3uQeOnv6WZh/preview"
+            {
+                "src": "https://drive.google.com/file/d/1NtFdr7GFX_CmBwukJX8TJAuOQ10JHSTz/preview",
+                "caption": "Nasogastric (NG) Tube Placement Locator"
+            },
+            {
+                "src": "https://drive.google.com/file/d/1FyGzgwlAHE2EUN3uJxcyn-ePOJp7zw6Z/preview",
+                "caption": "Simulation kit designed to replicate the human esophagus for testing purposes"
+            },
+            {
+                "src": "https://drive.google.com/file/d/1eeN0cY4oZeb3U-3p29KsZRNPWxBlkXA9/preview",
+                "caption": "The location of the NG tube can be identified by pressure readings (highest in the esophagus, then stomach, then lung/air)"
+            },
+            {
+                "src": "https://drive.google.com/file/d/1RTG9bsx28XAWoLgX70YIc3uQeOnv6WZh/preview",
+                "caption": "Demonstration showing the distinct pressure readings between lung/air and simulated esophagus kit"
+            }
         ],
         "link": [],
         "skills":[]

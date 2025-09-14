@@ -24,9 +24,6 @@ export default function Home() {
           {/* Projects Section */}
           <Project/>
 
-          {/* Skills Section */}
-          <Skills/>
-
         </div>
 
         <div>

@@ -90,6 +90,7 @@ export default function Projects() {
       >
         <Section title="Projects">
           <div className="relative flex items-center w-full">
+
             {/* Left button */}
             <div className="w-12 flex-shrink-0 flex justify-center">
               {isHovering && (
