@@ -2,7 +2,7 @@ import Hero from "../components/main/Hero";
 import Education from "../components/main/Education";
 import WorkExperience from "../components/main/WorkExperience";
 import Project from "../components/main/Projects";
-import Skills from "../components/main/Skills";
+import Certification from "../components/main/Certificate"
 
 import Footer from "../components/ui/Footer";
 
@@ -17,6 +17,9 @@ export default function Home() {
 
           {/* Work Experience Section */}
           <WorkExperience/>
+
+          {/* Certification Section */}
+          <Certification/>
 
           {/* Education Section */}
           <Education/>
