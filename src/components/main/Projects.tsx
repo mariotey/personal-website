@@ -17,7 +17,7 @@ export default function Projects() {
   const [isTouchDevice, setIsTouchDevice] = useState(false);
   const [touchStartX, setTouchStartX] = useState(0);
   const [touchStartY, setTouchStartY] = useState(0);
-  const [touchEndX, setTouchEndX] = useState(0);
+  const [, setTouchEndX] = useState(0);
   const [isInteracting, setIsInteracting] = useState(false);
   const [pageSize, setPageSize] = useState(3);
 
