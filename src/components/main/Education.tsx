@@ -53,6 +53,9 @@ export default function Education() {
                   <Image
                     src={certs[0].instituition_image}
                     alt={`${institution} logo`}
+                    /*
+                    unoptimized={certs[0].instituition_image.endsWith('.gif')}
+                    */
                     fill
                     className="object-contain"
                   />

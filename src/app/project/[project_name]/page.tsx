@@ -6,6 +6,7 @@ import Image from "next/image";
 
 import Button from "../../../components/ui/Button";
 import PageCard from "../../../components/ui/PageCard";
+import { useLoading } from "@/context/LoadingContext";
 
 import projectData from "../../../data/projects";
 
@@ -27,10 +28,93 @@ interface Props {
 export default function ProjectDetail({ params }: Props) {
   const { project_name } = React.use(params);
   const router = useRouter();
+  const { stopLoading } = useLoading();
+
   const [currentIndex, setCurrentIndex] = React.useState(0);
+  const [loadedCount, setLoadedCount] = React.useState(0);
 
   const typedProjectData = projectData as ProjectItem[];
   const proj = typedProjectData.find((p) => p.project_name === project_name);
+
+  // Calculate total elements that need loading
+  const totalElementsToLoad = React.useMemo(() => {
+    if (!proj) return 0;
+
+    let count = 0;
+
+    // Count media items (excluding Google Drive iframes - they load instantly)
+    if (proj.media) {
+      count += proj.media.filter(item =>
+        !item.src.includes("drive.google.com")
+      ).length;
+    }
+
+    // Count link icons
+    if (proj.link) {
+      count += proj.link.filter(item => item.icon).length;
+    }
+
+    return count;
+  }, [proj]);
+
+  // Preload ALL images on mount
+  React.useEffect(() => {
+    if (!proj) return;
+
+    // If nothing to load, stop immediately
+    if (totalElementsToLoad === 0) {
+      stopLoading();
+      return;
+    }
+
+    // Preload all media images
+    if (proj.media) {
+      proj.media.forEach((mediaItem) => {
+        // Skip iframes (Google Drive) - they don't need preloading
+        if (mediaItem.src.includes("drive.google.com")) {
+          return;
+        }
+
+        // Only run in browser
+        if (typeof window !== 'undefined') {
+          const img = new window.Image();
+          img.src = mediaItem.src;
+          img.onload = () => setLoadedCount(prev => prev + 1);
+          img.onerror = () => setLoadedCount(prev => prev + 1);
+        }
+      });
+    }
+
+    // Preload all link icons
+    if (proj.link) {
+      proj.link.forEach((linkItem) => {
+        if (linkItem.icon && typeof window !== 'undefined') {
+          const img = new window.Image();
+          img.src = linkItem.icon;
+          img.onload = () => setLoadedCount(prev => prev + 1);
+          img.onerror = () => setLoadedCount(prev => prev + 1);
+        }
+      });
+    }
+  }, [proj, totalElementsToLoad, stopLoading]);
+
+  // Timeout fallback (3 seconds)
+  React.useEffect(() => {
+    const timer = setTimeout(() => {
+      console.log("Loading timeout - forcing stop");
+      stopLoading();
+    }, 3000);
+
+    return () => clearTimeout(timer);
+  }, [stopLoading]);
+
+  // Stop loading when everything is loaded
+  React.useEffect(() => {
+    if (totalElementsToLoad > 0 && loadedCount >= totalElementsToLoad) {
+      console.log(`All ${totalElementsToLoad} elements loaded`);
+      stopLoading();
+    }
+  }, [loadedCount, totalElementsToLoad, stopLoading]);
 
   if (!proj) {
     return (

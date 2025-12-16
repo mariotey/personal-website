@@ -2,11 +2,11 @@
 
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
-import Link from "next/link";
 
 import Section from "../ui/Section";
 import Card from "../ui/Card";
 import Divider from "../ui/Divider";
+import LinkWithLoader from "../ui/LinkwithLoader";
 
 import projectsData from "../../data/projects";
 
@@ -128,7 +128,7 @@ export default function Projects() {
                     className="flex-shrink-0 w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 px-2 pb-4"
                   >
                     {projectsOnPage.map((project) => (
-                      <Link
+                      <LinkWithLoader
                         key={project.name}
                         href={`/project/${project.project_name}`}
                       >
@@ -151,7 +151,7 @@ export default function Projects() {
                             </h4>
                           </div>
                         </Card>
-                      </Link>
+                      </LinkWithLoader>
                     ))}
                   </div>
                 ))}

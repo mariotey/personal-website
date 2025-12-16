@@ -4,9 +4,9 @@
     "company": "National University Health System (NUHS)",
     "year": "Dec 2024 – Present",
     "description": [
-      "Built and managed forecasting pipelines aligned with the full machine learning lifecycle, emphasizing reproducibility and documentation, while collaborating closely with stakeholders to ensure reliable and actionable insights for healthcare planning.",
-      "Developed scalable, housing-constrained cohort-component and logarithmic models to forecast Singapore’s resident and non-resident populations, using SingStat datasets and exogenous features forecasted with statsforecast to support long-term healthcare demand and resource planning within NUHS cluster.",
-      "Managed and optimized a GAM-based bed occupancy forecasting pipeline, improving computational efficiency, forecast granularity, and internal documentation to support hospital resource planning, budgeting, and patient care decisions."
+      "Developed scalable, hierarchical, housing-constrained cohort-component and logarithmic models to forecast Singapore’s resident and non-resident populations, with exogenous features forecasted separately using statsforecast, to support long-term healthcare demand and resource planning within NUHS cluster.",
+      "Designed and implemented a cluster-based hierarchical GAM model for hospital bed occupancy forecasting, enabling multi-level forecasts to support long-term hospital resource planning, budgeting, and patient care strategies.",
+      "Designed and implemented ETL pipelines to clean, transform, and store datasets, enabling fast and reliable data retrieval and analysis for stakeholder requests to support resource allocation, capacity planning, and other development efforts."
     ]
   },
   {
@@ -14,6 +14,7 @@
     "company": "Johnson & Johnson Pte Ltd",
     "year": "May 2024 – Aug 2024",
     "description": [
+      "Performed time series analysis by clustering similar patterns with K-Means, extracting statistical features using tsfeatures, and applying ANOVA to identify key differentiators - enabling the development of a rule-based classification pipeline that labelled forecasts by business relevance (e.g., “Discontinued”, “Highly Volatile”), improving stakeholder interpretability and decision-making.",
       "Developed and deployed a rule-based classification pipeline that uses features identified with tsfeatures to classify time series forecasts by materiality, volatility, and accuracy into intuitive labels (e.g., “Discontinued”, “Highly Volatile”), improving stakeholder interpretability and decision-making.",
       "Incorporated machine learning models using mlforecast, improving forecasting accuracy by ~70% for targeted time series previously forecasted with statistical and econometric models.",
       "Utilized Git for version control, ensuring reproducibility and smooth team collaboration."
@@ -24,8 +25,7 @@
     "company": "MDesign Solutions Pte Ltd",
     "year": "Aug 2023 – Jan 2024",
     "description": [
-      "Developed and deployed a rule-based classification pipeline that uses features identified with tsfeatures to classify time series forecasts by materiality, volatility, and accuracy into intuitive labels (e.g., “Discontinued”, “Highly Volatile”), improving stakeholder interpretability and decision-making.",
-      "Incorporated machine learning models using mlforecast, improving forecasting accuracy by ~70% for targeted time series previously forecasted with statistical and econometric models.",
+      "Designed and deployed a Dockerized Flask web application with Zoho REST APIs and SQLite backend, delivering a real-time KPI monitoring dashboard, reducing data-gathering for HR and management from one week to an hourly update.",
       "Utilized Git for version control, ensuring reproducibility and smooth team collaboration."
     ]
   }
